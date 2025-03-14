@@ -1444,7 +1444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 321.52368, y: 3.4566956}
+  m_AnchoredPosition: {x: 321.52368, y: 3.456665}
   m_SizeDelta: {x: -751.2169, y: -89.7766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217706453
@@ -5456,7 +5456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047966309
@@ -6537,7 +6537,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271659226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908224666}
+        m_TargetAssemblyTypeName: Server, Assembly-CSharp
+        m_MethodName: sendImageCommand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271659226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8989,7 +9001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -196.9815, y: 3.4566956}
+  m_AnchoredPosition: {x: -196.98145, y: 3.456665}
   m_SizeDelta: {x: -499.3857, y: -89.7766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768429155
@@ -10149,10 +10161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10215,6 +10227,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f85f29a90723bc45804107d38113ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1908224665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908224667}
+  - component: {fileID: 1908224666}
+  m_Layer: 0
+  m_Name: ServerStarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1908224666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908224665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed020ea6b63a3d548930c2fb3b74d167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rawImageToSend: {fileID: 1389426302}
+--- !u!4 &1908224667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908224665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000.69257, y: 462.8689, z: -23.805588}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928156669
 GameObject:
   m_ObjectHideFlags: 0
@@ -11267,3 +11324,4 @@ SceneRoots:
   - {fileID: 1543095942}
   - {fileID: 1906978818}
   - {fileID: 2051715870}
+  - {fileID: 1908224667}
