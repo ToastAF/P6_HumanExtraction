@@ -38,6 +38,17 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.cv.synthetichumans": {
+      "version": "https://github.com/Unity-Technologies/com.unity.cv.synthetichumans.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ai.navigation": "1.0.0-exp.4",
+        "com.unity.perception": "1.0.0-preview.1",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "hash": "33c3e801a37412a8e9bf65d40c665805f3c3dbd4"
+    },
     "com.unity.ext.nunit": {
       "version": "2.0.5",
       "depth": 1,
@@ -92,6 +103,25 @@
       "depth": 3,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.perception": {
+      "version": "1.0.0-preview.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.7.3",
+        "com.unity.collections": "1.2.4",
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.render-pipelines.core": "12.1.7"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
