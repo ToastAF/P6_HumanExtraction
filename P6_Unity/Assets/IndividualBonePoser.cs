@@ -6,6 +6,9 @@ public class IndividualBonePoser : MonoBehaviour
 
     void Update()
     {
-        bone.transform.localPosition = transform.position; //Should set the bone's location as this empty object's location
+        //bone.transform.localPosition = transform.position; //Should set the bone's location as this empty object's location
+        bone.transform.position = Vector3.MoveTowards(bone.transform.position, transform.position, 1000);
     }
+
+
 }
