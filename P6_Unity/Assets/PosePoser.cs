@@ -13,7 +13,7 @@ public class PosePoser : MonoBehaviour
     public List<float> depthValues = new List<float>();
 
     public bool pose;
-    public float scalingValue;
+    public float scalingValue, depthScalingValue;
 
     void Start()
     {
@@ -26,14 +26,17 @@ public class PosePoser : MonoBehaviour
 
     void Update()
     {
-        ChangePose();
+        if(pose == true)
+        {
+            ChangePose();
+        }
     }
 
     public void ChangePose()
     {
         for (int i = 0; i < poses.Count; i++)
         {
-            poses[i].transform.position = new Vector3(rawXValues[i] / scalingValue, -rawYValues[i] / scalingValue, 0);
+            poses[i].transform.position = new Vector3(rawXValues[i] / scalingValue, -rawYValues[i] / scalingValue, depthValues[i] / depthScalingValue);
         }
     }
 }
