@@ -4,7 +4,7 @@ using UMA.CharacterSystem;
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ColorChangerPerhaps : MonoBehaviour
+public class ColorAndClothes : MonoBehaviour
 {
     DynamicCharacterAvatar avatarScript;
     UMATextRecipe clothItem;
@@ -33,39 +33,41 @@ public class ColorChangerPerhaps : MonoBehaviour
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
     }
 
+    // Condition først før man kører ChooseClothing hvor man vælger bodyType -> den kører en af 2 switch cases
+    
     public string ChooseClothing(string clothingType)
     {
         //['shirt, blouse', 'top, t-shirt, sweatshirt', 'sweater', 'cardigan', 'jacket',
         //'vest', 'pants', 'shorts', 'skirt', 'coat', 'dress', 'jumpsuit', 'cape', 'glasses',
         //'hat', 'headband, head covering, hair accessory', 'tie', 'glove', 'watch', 'belt',
         //'leg warmer', 'tights, stockings', 'sock', 'shoe', 'bag, 'scarf', 'umbrella', 'hood', 'collar']
-
+        
         switch (clothingType)
         {
             case "shirt, blouse":
                 UMABodyPart = "Chest"; //Hvor p� kroppen det skal sidde
-                return "Shirt"; //Navn p� UMA clothing recipe
+                return "M_T-Shirt"; //Navn p� UMA clothing recipe
             case "top, t-shirt, sweatshirt":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "sweater":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "cardigan":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "jacket":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_Jacket_2";
             case "vest":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_Vest_4";
             case "pants":
                 UMABodyPart = "Legs";
-                return "";
+                return "M_WorkPants_1";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "";
+                return "M_ShortsT2";
             case "skirt":
                 UMABodyPart = "Legs";
                 return "";
@@ -105,7 +107,8 @@ public class ColorChangerPerhaps : MonoBehaviour
             case "sock":
                 return "";
             case "shoe":
-                return "";
+                UMABodyPart = "Feet";
+                return "M_Shoes";
             case "bag":
                 return "";
             case "scarf":
@@ -123,9 +126,9 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     public void ChangeClothing(string clothing)
     {
-
-
-        avatarScript.SetSlot(UMABodyPart, ChooseClothing(clothing));
+        string TypeClothes = ChooseClothing(clothing);
+        
+        avatarScript.SetSlot(UMABodyPart, TypeClothes);
         avatarScript.BuildCharacter();
     }
 
@@ -134,4 +137,31 @@ public class ColorChangerPerhaps : MonoBehaviour
         avatarScript.SetColor("Shirt", Color.black);
         avatarScript.BuildCharacter();
     }
+    
+    
+    // Farver er i ClothingColorManager.CurrentColors.hex
+    // Labels er i ClothingColorManager.CurrentColors.label
+    
+    // Akkurate labels er i ClothingDetectionData.CurrentClothes.label;
+    // Hair type er i ClothingDetectionData.CurrentHairType;
+    // -> får enten short, long eller none
+    
+    
+    /*
+    public static class ClothingDetectionData
+    {
+        public static List<ClothingDetection> CurrentClothes = new List<ClothingDetection>();
+        public static string CurrentHairType = "";
+    }
+    */
+    
+    /*
+    public class ClothingDetection
+    {
+        public string label;
+        public float confidence;
+        public List<float> bbox; // [x_min, y_min, x_max, y_max]
+        // Remove hairType from here since it's now separate
+    }
+    */
 }
