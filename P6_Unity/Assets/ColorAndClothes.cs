@@ -22,7 +22,7 @@ public class ColorAndClothes : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            ChangeClothing("shirt, blouse");
+            ChangeClothing("jacket");
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -57,10 +57,10 @@ public class ColorAndClothes : MonoBehaviour
                 UMABodyPart = "Chest";
                 return "M_ThinShirt";
             case "jacket":
-                UMABodyPart = "Chest";
+                UMABodyPart = "Shoulders";
                 return "M_Jacket_2";
             case "vest":
-                UMABodyPart = "Chest";
+                UMABodyPart = "Shoulders";
                 return "M_Vest_4";
             case "pants":
                 UMABodyPart = "Legs";

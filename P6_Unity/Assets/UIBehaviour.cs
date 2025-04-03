@@ -15,7 +15,7 @@ public class UIBehaviour : MonoBehaviour
     private Image picture;
 
 
-
+    public GameObject guys;
     
 
 
@@ -28,6 +28,11 @@ public class UIBehaviour : MonoBehaviour
     void choosePicture()
     {
 
+    }
+
+    public void setGameObjectActive()
+    {
+        guys.SetActive(true);
     }
 
 

@@ -78,6 +78,7 @@ public class Server : MonoBehaviour
         public Transform imageContainer;  // Parent transform for spawned images
         private int checkmarkCount = 0;
         private RawImage rawPeopleToSend;
+        public GameObject guy;
         void Start() {
             ConnectToPython();
         }
@@ -429,7 +430,11 @@ public class Server : MonoBehaviour
                               $"and {ClothingColorManager.CurrentColors.Count} color entries");
                     DetectExample();
                     LogColorData();
-                    });
+                    PutTheClothes();
+                    
+                    
+
+                });
             });
         }
         catch (Exception e)
@@ -489,6 +494,15 @@ public class Server : MonoBehaviour
             }
     
             Debug.Log($"Detected hair type: {ClothingDetectionData.CurrentHairType}");
+        }
+
+        private void PutTheClothes()
+        {
+            foreach (var Clothes in ClothingDetectionData.CurrentClothes)
+            {
+                guy.GetComponent<ColorAndClothes>().ChangeClothing(Clothes.label);
+                Debug.Log($"I put {Clothes.label} on");
+            }
         }
         private void LogColorData()
         {
