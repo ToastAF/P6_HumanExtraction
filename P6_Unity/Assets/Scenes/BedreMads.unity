@@ -54808,14 +54808,13 @@ MonoBehaviour:
       m_Calls: []
   umaRoot: {fileID: 835286459}
   _umaRecipe:
-    raceData: {fileID: 11400000, guid: a88284a0175502f459c5496bda675fb1, type: 2}
+    raceData: {fileID: 11400000, guid: db2d831a2566b0b429982e394c380f7a, type: 2}
     dnaValues:
     - dnaTypeHash: 815443803
     slotDataList:
-    - asset: {fileID: 11400000, guid: d875ad325d19b924f961f76ec21a1737, type: 2}
+    - asset: {fileID: 11400000, guid: 66b309e501ffaf648976cd864885adfc, type: 2}
       overlayScale: 1
-      tags:
-      - Eyes
+      tags: []
       Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
@@ -54834,13 +54833,49 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 0
-      vertexOffset: 812
+      vertexOffset: 0
       UVArea:
         serializedVersion: 2
-        x: 0.5
+        x: 0
+        y: 0
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: ce30b1350e107d447b58027f4df2af16, type: 2}
+      overlayScale: 1
+      tags: []
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 11822
+      UVArea:
+        serializedVersion: 2
+        x: 0
         y: 0.5
         width: 0.25
-        height: 0.125
+        height: 0.0625
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -54849,12 +54884,45 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: deb3453bc9bb8564aa6e03f0fe057a91, type: 2}
+    - asset: {fileID: 11400000, guid: 3c191e1f833bf8d438a245aa7c88749b, type: 2}
       overlayScale: 1
-      tags:
-      - InnerMouth
-      - Mouth
-      - Head
+      tags: []
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 12592
+      UVArea:
+        serializedVersion: 2
+        x: 0.25
+        y: 0.5
+        width: 0.25
+        height: 0.0625
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 0}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: 8f6339dbb4c5d5148b78392c0e0a61a3, type: 2}
+      overlayScale: 1
+      tags: []
       Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
@@ -54873,194 +54941,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 0
-      vertexOffset: 1006
-      UVArea:
-        serializedVersion: 2
-        x: 0.75
-        y: 0.5
-        width: 0.25
-        height: 0.125
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 0}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: f44f393c2761113499160bf3976bea56, type: 2}
-      overlayScale: 1
-      tags:
-      - Torso
-      Races: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 1
-      vertexOffset: 1382
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 0.5
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 88189b4b69536ab4ea34e6b2974baed7, type: 2}
-      overlayScale: 1
-      tags:
-      - Feet
-      Races: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 1
-      vertexOffset: 2140
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 0.5
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: fa24076dd31d7334bb7741205a3b439c, type: 2}
-      overlayScale: 1
-      tags:
-      - Hands
-      Races: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 1
-      vertexOffset: 2600
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 0.5
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 37b3e7011ea87d7479417712563fbec8, type: 2}
-      overlayScale: 1
-      tags:
-      - Legs
-      Races: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 1
-      vertexOffset: 3322
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 0.5
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: bdd55e27c6850d64fb01592e11424e79, type: 2}
-      overlayScale: 1
-      tags:
-      - Head
-      - Face
-      - smooshtarget
-      Races: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 1
-      vertexOffset: 3830
+      vertexOffset: 3126
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55075,11 +54956,9 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 5d95a711691eb7c499b2676fdfeb6be2, type: 2}
+    - asset: {fileID: 11400000, guid: dd50b9aff9cd4354d9277d32cd1d2ee5, type: 2}
       overlayScale: 1
-      tags:
-      - EyeLash
-      - Head
+      tags: []
       Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
@@ -55097,26 +54976,25 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 2
-      vertexOffset: 7060
+      submeshIndex: 0
+      vertexOffset: 5756
       UVArea:
         serializedVersion: 2
-        x: 0.5
-        y: 0
-        width: 0.25
-        height: 1
+        x: 0
+        y: 0.5
+        width: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
-      altMaterial: {fileID: 0}
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
       BlendshapeSlotNames: []
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 8b232fbd9c99b3149bc6c4f6cb7afb7d, type: 2}
+    - asset: {fileID: 11400000, guid: b303347cfd390c2498c1ced0e283fb7a, type: 2}
       overlayScale: 1
-      tags:
-      - Eyebrows
+      tags: []
       Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
@@ -55134,18 +55012,18 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 2
-      vertexOffset: 7030
+      submeshIndex: 0
+      vertexOffset: 7659
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 0.5
-        height: 1
+        y: 0.5
+        width: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
-      altMaterial: {fileID: 0}
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
       BlendshapeSlotNames: []
       Suppressed: 0
       dontSerialize: 0
@@ -55171,8 +55049,8 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 7140
+      submeshIndex: 2
+      vertexOffset: 14006
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55207,14 +55085,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 0
-      vertexOffset: 0
+      submeshIndex: 1
+      vertexOffset: 10480
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 0.5
+        height: 0.25
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -55223,7 +55101,7 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 3df86e33f8ab5b449800beb382e487a9, type: 2}
+    - asset: {fileID: 11400000, guid: f552f5dd25919084fa1077b6df706c9d, type: 2}
       overlayScale: 1
       tags: []
       Races: []
@@ -55243,13 +55121,13 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 0
-      vertexOffset: 318
+      submeshIndex: 1
+      vertexOffset: 10798
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0.5
-        width: 0.5
+        y: 0.25
+        width: 1
         height: 0.25
       tempHidden: 0
       isDisabled: 0
@@ -55436,24 +55314,6 @@ MonoBehaviour:
       isBaseColor: 0
       deleteThis: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
-    - name: Trousers
-      channelMask:
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      channelAdditiveMask:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      PropertyBlock:
-        alwaysUpdate: 0
-        alwaysUpdateParms: 0
-        serializedProperties: []
-      foldout: 0
-      showAdvanced: 0
-      isBaseColor: 0
-      deleteThis: 0
-      displayColor: {r: 0, g: 0, b: 0, a: 0}
     - name: Shoes
       channelMask:
       - {r: 1, g: 1, b: 1, a: 1}
@@ -55492,7 +55352,7 @@ MonoBehaviour:
   context: {fileID: 459383900}
   umaData: {fileID: 1894944479}
   defaultRendererAsset: {fileID: 0}
-  umaRecipe: {fileID: 11400000, guid: e9c4ce3b586a9884f83db0fb2581ddfe, type: 2}
+  umaRecipe: {fileID: 11400000, guid: e2de835db39554843a2896cd5920324f, type: 2}
   umaAdditionalRecipes: []
   umaGenerator: {fileID: 459383898}
   animationController: {fileID: 0}
@@ -55556,7 +55416,7 @@ MonoBehaviour:
   rawAvatar: 1
   keepPredefinedDNA: 0
   activeRace:
-    name: HumanMale
+    name: HumanMaleHighPoly
   defaultChangeRaceOptions: 8
   cacheCurrentState: 1
   rebuildSkeleton: 0
@@ -55579,18 +55439,24 @@ MonoBehaviour:
       _compatibleRaces:
       - HumanMale
       - HumanMaleHighPoly
-    - _recipeName: M_ShortsT2
-      _enabledInDefaultWardrobe: 1
-      _compatibleRaces:
-      - HumanMaleHighPoly
-      - HumanMale
-      - HumanMaleDCS
     - _recipeName: M_Shoes
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
       - HumanMaleHighPoly
       - HumanMale
       - HumanMaleDCS
+    - _recipeName: M_ShortsT2
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanMaleHighPoly
+      - HumanMale
+      - HumanMaleDCS
+    - _recipeName: F_Jacket_2
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanFemaleHighPoly
+      - HumanFemale
+      - HumanFemaleDCS
   raceAnimationControllers:
     defaultAnimationController: {fileID: 0}
     animators: []
@@ -55950,6 +55816,29 @@ MonoBehaviour:
       isBaseColor: 0
       deleteThis: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
+      _name: 
+      _color: {r: 1, g: 1, b: 1, a: 1}
+      _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
+      Raw: 0
+      valuesConverted: 0
+    - name: Hearts
+      channelMask:
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      channelAdditiveMask:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      PropertyBlock:
+        alwaysUpdate: 0
+        alwaysUpdateParms: 0
+        serializedProperties: []
+      foldout: 0
+      showAdvanced: 0
+      isBaseColor: 0
+      deleteThis: 0
+      displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
       _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
