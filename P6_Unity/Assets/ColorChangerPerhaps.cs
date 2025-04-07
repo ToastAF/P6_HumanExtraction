@@ -56,7 +56,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 UMABodyPart = "Chest";
                 return "M_ThinShirt";
             case "jacket":
-                UMABodyPart = "Shoulder";
+                UMABodyPart = "Shoulders";
                 return "M_Jacket_2";
             case "vest":
                 UMABodyPart = "Shoulders";
