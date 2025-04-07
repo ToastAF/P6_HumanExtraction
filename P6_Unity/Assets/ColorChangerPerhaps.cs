@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class ColorChangerPerhaps : MonoBehaviour
 {
-    DynamicCharacterAvatar avatarScript;
+    public DynamicCharacterAvatar avatarScript;
     UMATextRecipe clothItem;
 
     string UMABodyPart;
