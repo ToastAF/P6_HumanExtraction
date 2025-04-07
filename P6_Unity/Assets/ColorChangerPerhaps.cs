@@ -23,7 +23,7 @@ public class ColorChangerPerhaps : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            ChangeClothing("shirt, blouse", testColor, testHairType);
+            ChangeClothing("shirt, blouse");
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -119,21 +119,18 @@ public class ColorChangerPerhaps : MonoBehaviour
             case "collar":
                 return "";
             default:
-                return "noClothes";
+                return "";
         }
     }
 
-    public void ChangeClothing(string clothing, string hexColor, string hairType)
+    public void ChangeHair(string hairType)
     {
-
-        //Skift tøj baseret på clothing variablen
-        avatarScript.SetSlot(UMABodyPart, ChooseClothing(clothing));
-
-        //Skirf hår baseret på hairType variablen
-        if(hairType == "short")
+        //Skitf hår baseret på hairType variablen
+        if (hairType == "short")
         {
             avatarScript.SetSlot("Hair", "MaleHairSlick01_Recipe"); // <-- Input kort hår recipe
-        }else if(hairType == "long")
+        }
+        else if (hairType == "long")
         {
             avatarScript.SetSlot("Hair", "FemaleHair1"); // <-- Input lang hår recipe
         }
@@ -141,7 +138,18 @@ public class ColorChangerPerhaps : MonoBehaviour
         {
             avatarScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
         }
+        avatarScript.BuildCharacter();
+    }
 
+    public void ChangeClothing(string clothing)
+    {
+        string chosenCloth = ChooseClothing(clothing);
+
+        //Skift tøj baseret på clothing variablen
+        if(chosenCloth != "")
+        {
+            avatarScript.SetSlot(UMABodyPart, chosenCloth);
+        }
         avatarScript.BuildCharacter();
     }
 
