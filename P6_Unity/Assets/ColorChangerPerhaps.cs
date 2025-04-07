@@ -11,7 +11,8 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     string UMABodyPart;
 
-    // List<float> bruh = [200, 0, 0];
+    string testColor = "#ff5733";
+    string testHairType = "short";
 
     void Start()
     {
@@ -22,12 +23,12 @@ public class ColorChangerPerhaps : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            ChangeClothing("shirt, blouse");
+            ChangeClothing("shirt, blouse", testColor, testHairType);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            ChangeColor();
+            ChangeColor(testColor, "");
         }
         
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
@@ -44,28 +45,28 @@ public class ColorChangerPerhaps : MonoBehaviour
         {
             case "shirt, blouse":
                 UMABodyPart = "Chest"; //Hvor p� kroppen det skal sidde
-                return "Shirt"; //Navn p� UMA clothing recipe
+                return "M_T-Shirt"; //Navn p� UMA clothing recipe
             case "top, t-shirt, sweatshirt":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "sweater":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "cardigan":
                 UMABodyPart = "Chest";
-                return "";
+                return "M_ThinShirt";
             case "jacket":
-                UMABodyPart = "Chest";
-                return "";
+                UMABodyPart = "Shoulder";
+                return "M_Jacket_2";
             case "vest":
-                UMABodyPart = "Chest";
-                return "";
+                UMABodyPart = "Shoulders";
+                return "M_Vest_4";
             case "pants":
                 UMABodyPart = "Legs";
-                return "";
+                return "M_WorkPants_1";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "";
+                return "M_ShortsT2";
             case "skirt":
                 UMABodyPart = "Legs";
                 return "";
@@ -105,7 +106,8 @@ public class ColorChangerPerhaps : MonoBehaviour
             case "sock":
                 return "";
             case "shoe":
-                return "";
+                UMABodyPart = "Feet";
+                return "M_Shoes";
             case "bag":
                 return "";
             case "scarf":
@@ -121,17 +123,70 @@ public class ColorChangerPerhaps : MonoBehaviour
         }
     }
 
-    public void ChangeClothing(string clothing)
+    public void ChangeClothing(string clothing, string hexColor, string hairType)
     {
 
-
+        //Skift tøj baseret på clothing variablen
         avatarScript.SetSlot(UMABodyPart, ChooseClothing(clothing));
+
+        //Skirf hår baseret på hairType variablen
+        if(hairType == "short")
+        {
+            avatarScript.SetSlot("Hair", "MaleHairSlick01_Recipe"); // <-- Input kort hår recipe
+        }else if(hairType == "long")
+        {
+            avatarScript.SetSlot("Hair", "FemaleHair1"); // <-- Input lang hår recipe
+        }
+        else
+        {
+            avatarScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
+        }
+
         avatarScript.BuildCharacter();
     }
 
-    public void ChangeColor()
+    public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
     {
-        avatarScript.SetColor("Shirt", Color.black);
+        switch (colorArea)
+        {
+            //Labels: 0: "Background", 1: "Hat", 2: "Hair", 3: "Sunglasses", 4: "Upper-clothes",
+            //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
+            //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
+            case "Hair":
+                avatarScript.SetColor("Hair", HexToColor32(inputColor));
+                break;
+            case "Upper-clothes":
+                avatarScript.SetColor("Vest Color", HexToColor32(inputColor));
+                avatarScript.SetColor("Shirt", HexToColor32(inputColor));
+                avatarScript.SetColor("Coat", HexToColor32(inputColor));
+                break;
+            case "Pants":
+                avatarScript.SetColor("Trousers", HexToColor32(inputColor));
+                break;
+            case "Left-shoe":
+                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                break;
+            case "Right-shoe":
+                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                break;
+            case "Face":
+                avatarScript.SetColor("Skin", HexToColor32(inputColor));
+                break;
+            default:
+                break;
+        }
         avatarScript.BuildCharacter();
+    }
+
+    Color32 HexToColor32(string hex) //Den her konverterer 
+    {
+        hex = hex.Replace("#", "");
+
+        byte r = byte.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+        byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        byte a = (hex.Length >= 8) ? byte.Parse(hex.Substring(6, 2), System.Globalization.NumberStyles.HexNumber) : (byte)255; // Optional alpha
+
+        return new Color32(r, g, b, a);
     }
 }
