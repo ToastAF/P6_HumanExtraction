@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 58a3e140d34790f449e0c0b53465d9de
+timeCreated: 1518596744
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/M_BaggyPants_1.asset
+  uploadId: 248433

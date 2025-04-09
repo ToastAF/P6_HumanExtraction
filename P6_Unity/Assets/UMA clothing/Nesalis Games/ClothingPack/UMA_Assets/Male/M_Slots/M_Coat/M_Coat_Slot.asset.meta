@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5b9f6a471080e1f41b476629e1b70b82
+timeCreated: 1518601460
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/M_Slots/M_Coat/M_Coat_Slot.asset
+  uploadId: 248433

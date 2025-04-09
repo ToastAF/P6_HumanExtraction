@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a5bd3fa3dad2efb45be5c4b2ec9148e3
+timeCreated: 1516179186
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/_Wardrobes/Hiders/BodyHiders/F_Torso_TurtleNeck_Hider.asset
+  uploadId: 248433

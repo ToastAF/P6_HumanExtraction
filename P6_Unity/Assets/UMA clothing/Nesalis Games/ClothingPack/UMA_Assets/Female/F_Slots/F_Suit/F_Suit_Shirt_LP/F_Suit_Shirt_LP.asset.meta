@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b542e69ef1c07ef41870a53ab74c710b
+timeCreated: 1519654987
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/F_Slots/F_Suit/F_Suit_Shirt_LP/F_Suit_Shirt_LP.asset
+  uploadId: 248433

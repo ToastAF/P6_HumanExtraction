@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cb9a550c5b773e04fa842a76fa9765ba
+timeCreated: 1517485258
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/_Wardrobes/Hiders/BodyHiders/F_High_Torso_ForJacket_Hider.asset
+  uploadId: 248433

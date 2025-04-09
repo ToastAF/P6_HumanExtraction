@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c3dc9c8f6f5e01e4d81e149b5009904c
+timeCreated: 1519304422
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/Hiders/BodyHiders/M_NeckPartial_Hider.asset
+  uploadId: 248433

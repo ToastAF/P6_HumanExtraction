@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d2635715def4e3b468b6f748c9057240
+timeCreated: 1510324554
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/F_Slots/Shoes_LP/Shoes_LP_Slot.asset
+  uploadId: 248433

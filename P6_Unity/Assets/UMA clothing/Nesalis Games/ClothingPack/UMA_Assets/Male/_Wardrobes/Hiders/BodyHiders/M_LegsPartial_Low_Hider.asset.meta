@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 75cd8b2a8c639e346b71bab12259c4f9
+timeCreated: 1518603287
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/Hiders/BodyHiders/M_LegsPartial_Low_Hider.asset
+  uploadId: 248433

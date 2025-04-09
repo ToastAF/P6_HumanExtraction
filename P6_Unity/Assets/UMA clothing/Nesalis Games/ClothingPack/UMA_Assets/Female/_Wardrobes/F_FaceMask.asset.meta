@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fd0eb462734847a4b8b1a8ec37097413
+timeCreated: 1516116231
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/_Wardrobes/F_FaceMask.asset
+  uploadId: 248433

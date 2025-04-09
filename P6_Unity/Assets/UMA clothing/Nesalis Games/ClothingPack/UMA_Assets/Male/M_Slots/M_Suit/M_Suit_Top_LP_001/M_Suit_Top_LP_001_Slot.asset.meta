@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 100cd48b3dfc15b42a5b3f6de9f8845e
+timeCreated: 1519380794
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/M_Slots/M_Suit/M_Suit_Top_LP_001/M_Suit_Top_LP_001_Slot.asset
+  uploadId: 248433

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 12acf9df6dd033542a40c6707aaf9bc1
+timeCreated: 1518607132
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/M_Backpack.asset
+  uploadId: 248433

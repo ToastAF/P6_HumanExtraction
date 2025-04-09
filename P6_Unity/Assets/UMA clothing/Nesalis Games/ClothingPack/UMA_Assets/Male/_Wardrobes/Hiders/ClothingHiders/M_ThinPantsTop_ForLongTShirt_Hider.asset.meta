@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d3f323ce66613064c975ca3f452e0a03
+timeCreated: 1518602406
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/Hiders/ClothingHiders/M_ThinPantsTop_ForLongTShirt_Hider.asset
+  uploadId: 248433
