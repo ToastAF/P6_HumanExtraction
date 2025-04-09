@@ -37913,7 +37913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327337463}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.032838464, y: 0.038400326, z: -0.0046736724, w: 0.99871176}
+  m_LocalRotation: {x: -0.0328385, y: 0.038400326, z: -0.004673677, w: 0.99871176}
   m_LocalPosition: {x: -0.18747759, y: 0.000000019040892, z: 0.00026682502}
   m_LocalScale: {x: 1.0000001, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -55799,6 +55799,29 @@ MonoBehaviour:
       _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
       Raw: 0
       valuesConverted: 0
+    - name: Coat
+      channelMask:
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      channelAdditiveMask:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      PropertyBlock:
+        alwaysUpdate: 0
+        alwaysUpdateParms: 0
+        serializedProperties: []
+      foldout: 0
+      showAdvanced: 0
+      isBaseColor: 0
+      deleteThis: 0
+      displayColor: {r: 0, g: 0, b: 0, a: 0}
+      _name: 
+      _color: {r: 1, g: 1, b: 1, a: 1}
+      _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
+      Raw: 0
+      valuesConverted: 0
   predefinedDNA:
     PreloadValues: []
   loadPathType: 0
@@ -55875,6 +55898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1571822e825633f49a8f3263b5874766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatarScript: {fileID: 0}
 --- !u!1001 &1896867914
 PrefabInstance:
   m_ObjectHideFlags: 0

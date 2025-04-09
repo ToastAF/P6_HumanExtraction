@@ -11,7 +11,7 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     string UMABodyPart;
 
-    string testColor = "#ff5733";
+    string testColor = "#ff0000";
     string testHairType = "short";
 
     void Start()
@@ -23,12 +23,12 @@ public class ColorChangerPerhaps : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            ChangeClothing("shirt, blouse");
+            ChangeClothing("jacket");
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            ChangeColor(testColor, "");
+            ChangeColor(testColor, "Upper-clothes");
         }
         
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
@@ -155,34 +155,38 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
     {
+        OverlayColorData temp = new OverlayColorData(1);
+        temp.channelAdditiveMask[0] = HexToColor32(inputColor);
+
         switch (colorArea)
         {
             //Labels: 0: "Background", 1: "Hat", 2: "Hair", 3: "Sunglasses", 4: "Upper-clothes",
             //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
             //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
             case "Hair":
-                avatarScript.SetColor("Hair", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Hair", temp, true);
                 break;
             case "Upper-clothes":
-                avatarScript.SetColor("Vest Color", HexToColor32(inputColor));
-                avatarScript.SetColor("Shirt", HexToColor32(inputColor));
-                avatarScript.SetColor("Coat", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Vest Color", temp, true);
+                avatarScript.SetRawColor("Shirt", temp, true);
+                avatarScript.SetRawColor("Coat", temp, true);
                 break;
             case "Pants":
-                avatarScript.SetColor("Trousers", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Trousers", temp, true);
                 break;
             case "Left-shoe":
-                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Shoes", temp, true);
                 break;
             case "Right-shoe":
-                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Shoes", temp, true);
                 break;
             case "Face":
-                avatarScript.SetColor("Skin", HexToColor32(inputColor));
+                avatarScript.SetRawColor("Skin", temp, true);
                 break;
             default:
                 break;
         }
+        avatarScript.UpdateColors();
         avatarScript.BuildCharacter();
     }
 
@@ -193,8 +197,8 @@ public class ColorChangerPerhaps : MonoBehaviour
         byte r = byte.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
         byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
         byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
-        byte a = (hex.Length >= 8) ? byte.Parse(hex.Substring(6, 2), System.Globalization.NumberStyles.HexNumber) : (byte)255; // Optional alpha
+        //byte a = (hex.Length >= 8) ? byte.Parse(hex.Substring(6, 2), System.Globalization.NumberStyles.HexNumber) : (byte)255; // Optional alpha
 
-        return new Color32(r, g, b, a);
+        return new Color32(r, g, b, 255);
     }
 }
