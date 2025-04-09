@@ -37913,7 +37913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327337463}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0328385, y: 0.038400326, z: -0.004673677, w: 0.99871176}
+  m_LocalRotation: {x: -0.032838564, y: 0.038400326, z: -0.004673685, w: 0.99871176}
   m_LocalPosition: {x: -0.18747759, y: 0.000000019040892, z: 0.00026682502}
   m_LocalScale: {x: 1.0000001, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -54834,7 +54834,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 0
-      vertexOffset: 3119
+      vertexOffset: 1586
       UVArea:
         serializedVersion: 2
         x: 0
@@ -54873,7 +54873,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 0
-      vertexOffset: 3313
+      vertexOffset: 1780
       UVArea:
         serializedVersion: 2
         x: 0.25
@@ -54910,7 +54910,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 3689
+      vertexOffset: 2156
       UVArea:
         serializedVersion: 2
         x: 0
@@ -54947,7 +54947,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 4447
+      vertexOffset: 2914
       UVArea:
         serializedVersion: 2
         x: 0
@@ -54984,7 +54984,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 5169
+      vertexOffset: 3636
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55023,7 +55023,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 5677
+      vertexOffset: 4144
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55033,7 +55033,7 @@ MonoBehaviour:
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
-      altMaterial: {fileID: 0}
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
       BlendshapeSlotNames: []
       Suppressed: 0
       dontSerialize: 0
@@ -55061,7 +55061,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 8907
+      vertexOffset: 7374
       UVArea:
         serializedVersion: 2
         x: 0.5
@@ -55098,7 +55098,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 8877
+      vertexOffset: 7344
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55113,7 +55113,44 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 2be54f8bb776cf440b3f9cc8d1fa9b31, type: 2}
+    - asset: {fileID: 11400000, guid: b50583b1ad6156647a9340322eca92b2, type: 2}
+      overlayScale: 1
+      tags:
+      - smooshable
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 3
+      vertexOffset: 7454
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 0}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: 2cb2983296041e847952f15c6e91cced, type: 2}
       overlayScale: 1
       tags: []
       Races: []
@@ -55170,7 +55207,7 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 0
-      vertexOffset: 2095
+      vertexOffset: 562
       UVArea:
         serializedVersion: 2
         x: 0
@@ -55362,7 +55399,7 @@ MonoBehaviour:
       isBaseColor: 0
       deleteThis: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
-    - name: Pants
+    - name: Trousers
       channelMask:
       - {r: 1, g: 1, b: 1, a: 1}
       - {r: 1, g: 1, b: 1, a: 1}
@@ -55379,7 +55416,7 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      displayColor: {r: 1, g: 1, b: 1, a: 1}
+      displayColor: {r: 0, g: 0, b: 0, a: 0}
     - name: Shoes
       channelMask:
       - {r: 1, g: 1, b: 1, a: 1}
@@ -55495,15 +55532,22 @@ MonoBehaviour:
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
       - HumanMale
-    - _recipeName: MaleSweatPants_Recipe
-      _enabledInDefaultWardrobe: 1
-      _compatibleRaces:
-      - HumanMale
     - _recipeName: TallShoes_Recipe
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
       - HumanMale
       - HumanMaleHighPoly
+    - _recipeName: M_WorkPants_1
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanMaleHighPoly
+      - HumanMale
+      - HumanMaleDCS
+    - _recipeName: MaleHairSlick01_Recipe
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanMale
+      - Elf Male
   raceAnimationControllers:
     defaultAnimationController: {fileID: 0}
     animators: []
@@ -55822,6 +55866,29 @@ MonoBehaviour:
       _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
       Raw: 0
       valuesConverted: 0
+    - name: Trousers
+      channelMask:
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      channelAdditiveMask:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      PropertyBlock:
+        alwaysUpdate: 0
+        alwaysUpdateParms: 0
+        serializedProperties: []
+      foldout: 0
+      showAdvanced: 0
+      isBaseColor: 0
+      deleteThis: 0
+      displayColor: {r: 0, g: 0, b: 0, a: 0}
+      _name: 
+      _color: {r: 1, g: 1, b: 1, a: 1}
+      _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
+      Raw: 0
+      valuesConverted: 0
   predefinedDNA:
     PreloadValues: []
   loadPathType: 0
@@ -55899,6 +55966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarScript: {fileID: 0}
+  TestChangeSTRING: 
 --- !u!1001 &1896867914
 PrefabInstance:
   m_ObjectHideFlags: 0

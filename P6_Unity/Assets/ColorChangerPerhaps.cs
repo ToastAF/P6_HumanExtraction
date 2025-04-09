@@ -10,8 +10,9 @@ public class ColorChangerPerhaps : MonoBehaviour
     UMATextRecipe clothItem;
 
     string UMABodyPart;
+    public string TestChangeSTRING;
 
-    string testColor = "#ff0000";
+    string testColor = "#8f746e";
     string testHairType = "short";
 
     void Start()
@@ -28,7 +29,7 @@ public class ColorChangerPerhaps : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            ChangeColor(testColor, "Upper-clothes");
+            ChangeColor(testColor, TestChangeSTRING);
         }
         
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
@@ -155,8 +156,11 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
     {
-        OverlayColorData temp = new OverlayColorData(1);
-        temp.channelAdditiveMask[0] = HexToColor32(inputColor);
+        OverlayColorData raw = new OverlayColorData(1);
+        raw.channelAdditiveMask[0] = HexToColor32(inputColor);
+
+        OverlayColorData cooked = new OverlayColorData(2);
+        cooked.channelMask[1] = HexToColor32(inputColor);
 
         switch (colorArea)
         {
@@ -164,30 +168,32 @@ public class ColorChangerPerhaps : MonoBehaviour
             //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
             //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
             case "Hair":
-                avatarScript.SetRawColor("Hair", temp, true);
+                avatarScript.SetColor("Hair", HexToColor32(inputColor));
                 break;
             case "Upper-clothes":
-                avatarScript.SetRawColor("Vest Color", temp, true);
-                avatarScript.SetRawColor("Shirt", temp, true);
-                avatarScript.SetRawColor("Coat", temp, true);
+                avatarScript.SetRawColor("Vest Color", raw, true);
+                avatarScript.SetRawColor("Shirt", raw, true);
+                avatarScript.SetRawColor("Coat", raw, true);
                 break;
             case "Pants":
-                avatarScript.SetRawColor("Trousers", temp, true);
+                avatarScript.SetRawColor("Trousers", raw, true);
+                avatarScript.SetRawColor("Pants", raw, true);
                 break;
             case "Left-shoe":
-                avatarScript.SetRawColor("Shoes", temp, true);
+                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
                 break;
             case "Right-shoe":
-                avatarScript.SetRawColor("Shoes", temp, true);
+                avatarScript.SetRawColor("Shoes", cooked, true);
                 break;
             case "Face":
-                avatarScript.SetRawColor("Skin", temp, true);
+                avatarScript.SetColor("Skin", HexToColor32(inputColor));
                 break;
             default:
                 break;
         }
         avatarScript.UpdateColors();
         avatarScript.BuildCharacter();
+        Debug.Log("Changed color!");
     }
 
     Color32 HexToColor32(string hex) //Den her konverterer 
