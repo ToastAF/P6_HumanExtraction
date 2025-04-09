@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ce64ec7467fb21b4e9cc49cfdd439840
+timeCreated: 1518691249
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/Hiders/BodyHiders/M_Feet_Full_Hider.asset
+  uploadId: 248433

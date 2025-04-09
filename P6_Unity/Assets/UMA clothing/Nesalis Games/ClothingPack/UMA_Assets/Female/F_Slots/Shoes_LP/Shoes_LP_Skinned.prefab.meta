@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b6e051fd82342744ea13c97751dc5d39
+timeCreated: 1510324552
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/F_Slots/Shoes_LP/Shoes_LP_Skinned.prefab
+  uploadId: 248433

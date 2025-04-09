@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 4fe617fe6e3ac944a97ba322d07e3cf0
+timeCreated: 1520348779
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/M_Slots/M_SportShoes/M_SportShoes_Skinned.prefab
+  uploadId: 248433

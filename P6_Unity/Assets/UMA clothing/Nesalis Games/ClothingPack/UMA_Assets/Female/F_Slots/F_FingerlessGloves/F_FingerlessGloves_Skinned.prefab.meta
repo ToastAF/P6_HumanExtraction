@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5409c0329c667ef458c7abb2c2ad06f3
+timeCreated: 1519986967
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Female/F_Slots/F_FingerlessGloves/F_FingerlessGloves_Skinned.prefab
+  uploadId: 248433

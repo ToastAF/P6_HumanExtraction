@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 19d914bb9a8fef24e8f2d6f7495bb8f1
+timeCreated: 1518601699
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119640
+  packageName: UMA Clothing Pack
+  packageVersion: 1.0
+  assetPath: Assets/Nesalis Games/ClothingPack/UMA_Assets/Male/_Wardrobes/M_Boots.asset
+  uploadId: 248433
