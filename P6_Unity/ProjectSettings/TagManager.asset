@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UMAKeepChain
   - UMAIgnore
+  - Dropdown
   layers:
   - Default
   - TransparentFX
