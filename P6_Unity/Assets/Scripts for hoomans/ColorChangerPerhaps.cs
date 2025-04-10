@@ -22,7 +22,7 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     void Start()
     {
-        ChooseGenderAvatar();
+    
     }
 
     void Update()
@@ -36,8 +36,10 @@ public class ColorChangerPerhaps : MonoBehaviour
         {
             ChangeColor(testColor, TestChangeSTRING);
         }
-        
+
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
+
+        ChooseGenderAvatar();
     }
 
     public void ChooseGenderAvatar()
@@ -45,10 +47,14 @@ public class ColorChangerPerhaps : MonoBehaviour
         if (isGuy == true)
         {
             avatarScript = guy.GetComponent<DynamicCharacterAvatar>();
+            gal.SetActive(false);
+            guy.SetActive(true);
         }
         else
         {
             avatarScript = gal.GetComponent<DynamicCharacterAvatar>();
+            gal.SetActive(true);
+            guy.SetActive(false);
         }
     }
 
@@ -78,7 +84,7 @@ public class ColorChangerPerhaps : MonoBehaviour
         }
         else if (hairType == "long")
         {
-            avatarScript.SetSlot("Hair", "FemaleHair1"); // <-- Input lang hår recipe
+            avatarScript.SetSlot("Hair", "FemaleHair3"); // <-- Input lang hår recipe
         }
         else
         {
@@ -119,6 +125,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 avatarScript.SetRawColor("Vest Color", raw, true);
                 avatarScript.SetRawColor("Shirt", raw, true);
                 avatarScript.SetRawColor("Coat", raw, true);
+                avatarScript.SetRawColor("Jacket", raw, true);
                 break;
             case "Pants":
                 avatarScript.SetRawColor("Trousers", raw, true);
@@ -128,7 +135,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 avatarScript.SetColor("Shoes", HexToColor32(inputColor));
                 break;
             case "Right-shoe":
-                avatarScript.SetRawColor("Shoes", cooked, true);
+                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
                 break;
             case "Face":
                 avatarScript.SetColor("Skin", HexToColor32(inputColor));
@@ -243,34 +250,34 @@ public class ColorChangerPerhaps : MonoBehaviour
         {
             case "shirt, blouse":
                 UMABodyPart = "Chest"; //Hvor p� kroppen det skal sidde
-                return "M_T-Shirt"; //Navn p� UMA clothing recipe
+                return "F_Shirt"; //Navn p� UMA clothing recipe
             case "top, t-shirt, sweatshirt":
                 UMABodyPart = "Chest";
-                return "M_ThinShirt";
+                return "F_TurtleNeck_1";
             case "sweater":
                 UMABodyPart = "Chest";
-                return "M_ThinShirt";
+                return "F_TurtleNeck_1";
             case "cardigan":
                 UMABodyPart = "Chest";
-                return "M_ThinShirt";
+                return "F_TurtleNeck_1";
             case "jacket":
                 UMABodyPart = "Shoulders";
-                return "M_Jacket_2";
+                return "F_Jacket_1";
             case "vest":
                 UMABodyPart = "Shoulders";
-                return "M_Vest_4";
+                return "";
             case "pants":
                 UMABodyPart = "Legs";
-                return "M_WorkPants_1";
+                return "F_Trousers";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "M_ShortsT2";
+                return "M_ShortsT1";
             case "skirt":
                 UMABodyPart = "Legs";
-                return "";
+                return "F_Mini_Skirt_2";
             case "coat":
                 UMABodyPart = "Chest";
-                return "";
+                return "F_Coat_3";
             case "dress":
                 UMABodyPart = "Chest";
                 return "";
@@ -282,7 +289,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 return "";
             case "glasses":
                 UMABodyPart = "Face";
-                return "";
+                return "F_Glasses";
             case "hat":
                 UMABodyPart = "Helmet";
                 return "";
@@ -305,7 +312,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 return "";
             case "shoe":
                 UMABodyPart = "Feet";
-                return "M_Shoes";
+                return "F_Shoes";
             case "bag":
                 return "";
             case "scarf":
