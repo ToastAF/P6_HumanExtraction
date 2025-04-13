@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:P6_Unity/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteHighDetail.png.meta
 guid: ce940996bbf9aaf48b93e33ebcc08831
+=======
+guid: ccdca39e387d8e34ab9c01b4b3995bea
+timeCreated: 1515062944
+licenseType: Store
+>>>>>>> Stashed changes:P6_Unity/Assets/UMA clothing/Nesalis Games/ClothingPack/UMA_Assets/Female/Textures/F_Coat_1/F_Coat_lp3_Coat_Normal.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}

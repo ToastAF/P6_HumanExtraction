@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:P6_Unity/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteLowDetail.png.meta
 guid: 3f18f8476b7bfc642a7ba293296dc40f
+=======
+guid: 821444ea954a74b4ebf59aec540fb09f
+timeCreated: 1519032352
+licenseType: Store
+>>>>>>> Stashed changes:P6_Unity/Assets/UMA clothing/Nesalis Games/ClothingPack/UMA_Assets/Male/Textures/M_Pants_1/M_Pants_1_LP_DefaultMaterial_DiffuseTransparency.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
