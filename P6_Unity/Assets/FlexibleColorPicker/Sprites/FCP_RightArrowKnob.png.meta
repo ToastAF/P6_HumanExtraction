@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:P6_Unity/Assets/FlexibleColorPicker/Sprites/FCP_RightArrowKnob.png.meta
 guid: e0c3f09037dd1644d982f8da2c4ed6ad
+=======
+guid: 559a293dbd367614da2739f9d6729663
+timeCreated: 1519130161
+licenseType: Store
+>>>>>>> Stashed changes:P6_Unity/Assets/UMA clothing/Nesalis Games/ClothingPack/UMA_Assets/Male/Textures/M_Vest_1/M_Vest_LP_Vest_Normal.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
