@@ -79,6 +79,7 @@ public class Server : MonoBehaviour
         private int checkmarkCount = 0;
         private RawImage rawPeopleToSend;
         public GameObject guy;
+        public GameObject gal;
         void Start() {
             ConnectToPython();
         }
@@ -430,7 +431,11 @@ public class Server : MonoBehaviour
                               $"and {ClothingColorManager.CurrentColors.Count} color entries");
                     DetectExample();
                     LogColorData();
+                    
                     PutTheClothes();
+                    guy.GetComponent<ColorChangerPerhaps>().ChangeHair(ClothingDetectionData.CurrentHairType);
+                    gal.GetComponent<ColorChangerPerhaps>().ChangeHair(ClothingDetectionData.CurrentHairType);
+                    PutTheColorOn();
                     
                     
 
@@ -500,9 +505,24 @@ public class Server : MonoBehaviour
         {
             foreach (var Clothes in ClothingDetectionData.CurrentClothes)
             {
-                guy.GetComponent<ColorAndClothes>().ChangeClothing(Clothes.label);
+                guy.GetComponent<ColorChangerPerhaps>().ChangeClothing(Clothes.label);
+                gal.GetComponent<ColorChangerPerhaps>().ChangeClothing(Clothes.label);
                 Debug.Log($"I put {Clothes.label} on");
             }
+        }
+        
+        private void PutTheColorOn()
+        {
+            foreach (var Cloth in ClothingColorManager.CurrentColors)
+            {
+                guy.GetComponent<ColorChangerPerhaps>().ChangeColor(Cloth.hex,Cloth.label);
+                gal.GetComponent<ColorChangerPerhaps>().ChangeColor(Cloth.hex,Cloth.label);
+                Debug.Log($"I change color of {Cloth.label} to be {Cloth.hex}!");
+            }
+            guy.GetComponent<ColorChangerPerhaps>().avatarScript.UpdateColors();
+            guy.GetComponent<ColorChangerPerhaps>().avatarScript.BuildCharacter();
+            gal.GetComponent<ColorChangerPerhaps>().avatarScript.UpdateColors();
+            gal.GetComponent<ColorChangerPerhaps>().avatarScript.BuildCharacter();
         }
         private void LogColorData()
         {
