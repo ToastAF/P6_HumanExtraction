@@ -107,11 +107,13 @@ public class ColorChangerPerhaps : MonoBehaviour
 
     public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
     {
-        OverlayColorData raw = new OverlayColorData(1);
-        raw.channelAdditiveMask[0] = HexToColor32(inputColor);
+        Color tempColor = HexToColor32(inputColor);
+
+        OverlayColorData raw = new OverlayColorData(1); // Det er sådan her UMA laver colors til deres ting. De bruger OverlayColorData...
+        raw.channelAdditiveMask[0] = tempColor;
 
         OverlayColorData cooked = new OverlayColorData(2);
-        cooked.channelMask[1] = HexToColor32(inputColor);
+        cooked.channelMask[1] = tempColor;
 
         switch (colorArea)
         {
@@ -119,7 +121,7 @@ public class ColorChangerPerhaps : MonoBehaviour
             //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
             //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
             case "Hair":
-                avatarScript.SetColor("Hair", HexToColor32(inputColor));
+                avatarScript.SetColor("Hair", tempColor);
                 break;
             case "Upper-clothes":
                 avatarScript.SetRawColor("Vest Color", raw, true);
@@ -132,13 +134,13 @@ public class ColorChangerPerhaps : MonoBehaviour
                 avatarScript.SetRawColor("Pants", raw, true);
                 break;
             case "Left-shoe":
-                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                avatarScript.SetColor("Shoes", tempColor);
                 break;
             case "Right-shoe":
-                avatarScript.SetColor("Shoes", HexToColor32(inputColor));
+                avatarScript.SetColor("Shoes", tempColor);
                 break;
             case "Face":
-                avatarScript.SetColor("Skin", HexToColor32(inputColor));
+                avatarScript.SetColor("Skin", tempColor);
                 break;
             default:
                 break;

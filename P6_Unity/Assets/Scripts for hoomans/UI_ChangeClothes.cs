@@ -56,6 +56,8 @@ public class UI_ChangeClothes : MonoBehaviour
                 return "jacket";
             case "Vest":
                 return "vest";
+            case "Turtleneck":
+                return "cardigan";
             case "Coat":
                 return "coat";
 
