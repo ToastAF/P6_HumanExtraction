@@ -81,8 +81,12 @@ public class Server : MonoBehaviour
 
         public GameObject hoomanManager;
 
-        void Start() {
+        private List<float> hsvHolder = new List<float>{0, 255, 255};
+
+        void Start()
+        {
             ConnectToPython();
+       
         }
 
         void OnApplicationQuit()
@@ -505,7 +509,11 @@ public class Server : MonoBehaviour
         {
             foreach (var Clothes in ClothingDetectionData.CurrentClothes)
             {
-                hoomanManager.GetComponent<ColorChangerPerhaps>().ChangeClothing(Clothes.label);
+                ColorChangerPerhaps temp = hoomanManager.GetComponent<ColorChangerPerhaps>();
+                temp.ChangeClothing(Clothes.label);
+                temp.isGuy = !temp.isGuy;
+                temp.ChangeClothing(Clothes.label);
+                
                 Debug.Log($"I put {Clothes.label} on");
             }
         }

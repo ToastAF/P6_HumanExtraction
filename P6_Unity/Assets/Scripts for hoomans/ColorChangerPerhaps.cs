@@ -47,14 +47,14 @@ public class ColorChangerPerhaps : MonoBehaviour
         if (isGuy == true)
         {
             avatarScript = guy.GetComponent<DynamicCharacterAvatar>();
-            gal.SetActive(false);
-            guy.SetActive(true);
+            //gal.SetActive(false);
+            //guy.SetActive(true);
         }
         else
         {
             avatarScript = gal.GetComponent<DynamicCharacterAvatar>();
-            gal.SetActive(true);
-            guy.SetActive(false);
+            //gal.SetActive(true);
+            //guy.SetActive(false);
         }
     }
 
@@ -108,7 +108,8 @@ public class ColorChangerPerhaps : MonoBehaviour
     public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
     {
         Color tempColor = HexToColor32(inputColor);
-
+        //Color tempColor = inputColor;
+        
         OverlayColorData raw = new OverlayColorData(1); // Det er sådan her UMA laver colors til deres ting. De bruger OverlayColorData...
         raw.channelAdditiveMask[0] = tempColor;
 
@@ -121,7 +122,7 @@ public class ColorChangerPerhaps : MonoBehaviour
             //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
             //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
             case "Hair":
-                avatarScript.SetColor("Hair", tempColor);
+                avatarScript.SetRawColor("Hair", cooked, true);
                 break;
             case "Upper-clothes":
                 avatarScript.SetRawColor("Vest Color", raw, true);
