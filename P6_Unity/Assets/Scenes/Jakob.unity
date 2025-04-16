@@ -1726,6 +1726,7 @@ Transform:
   m_Children:
   - {fileID: 1253562024}
   - {fileID: 304264991}
+  - {fileID: 122442904}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 305.125, z: 0}
 --- !u!1 &75845124
@@ -2254,8 +2255,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122442902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 2.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0.46078217, z: -0, w: -0.8875133}
+  m_LocalPosition: {x: -0.23014383, y: 2.2, z: 0.32716024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2273,7 +2274,7 @@ Transform:
   - {fileID: 1825140456}
   - {fileID: 1446923949}
   - {fileID: 83702014}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 72684297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &125993580
 GameObject:
@@ -8812,8 +8813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guy: {fileID: 1894944478}
   gal: {fileID: 1444025319}
-  isGuy: 0
-  avatarScript: {fileID: 0}
+  guyScript: {fileID: 0}
+  galScript: {fileID: 0}
   TestChangeSTRING: 
 --- !u!4 &637631587
 Transform:
@@ -17151,7 +17152,7 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 911a7511737178d4dbfe1ab52a2d8887, type: 2}
+    - asset: {fileID: 11400000, guid: 5baae6388af63c0448e6d614fa7586b3, type: 2}
       overlayScale: 1
       tags: []
       Races: []
@@ -17545,12 +17546,8 @@ MonoBehaviour:
   alwaysRebuildSkeleton: 0
   forceRebindAnimator: 0
   preloadWardrobeRecipes:
-    loadDefaultRecipes: 1
+    loadDefaultRecipes: 0
     recipes:
-    - _recipeName: FemaleHair3
-      _enabledInDefaultWardrobe: 1
-      _compatibleRaces:
-      - HumanFemale
     - _recipeName: FemaleUndies
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
@@ -17562,6 +17559,10 @@ MonoBehaviour:
       - HumanFemale
       - HumanFemaleDCS
       - HumanMaleHighPoly
+    - _recipeName: FemaleHair2
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanFemale
   raceAnimationControllers:
     defaultAnimationController: {fileID: 0}
     animators: []
@@ -22882,7 +22883,7 @@ MonoBehaviour:
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: b50583b1ad6156647a9340322eca92b2, type: 2}
+    - asset: {fileID: 11400000, guid: b5a79dacb1617ae44a91c53832515bbb, type: 2}
       overlayScale: 1
       tags:
       - smooshable
@@ -23247,17 +23248,16 @@ MonoBehaviour:
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
       - HumanMale
-    - _recipeName: MaleHairSlick01_Recipe
-      _enabledInDefaultWardrobe: 1
-      _compatibleRaces:
-      - HumanMale
-      - Elf Male
     - _recipeName: M_Shoes
       _enabledInDefaultWardrobe: 1
       _compatibleRaces:
       - HumanMaleHighPoly
       - HumanMale
       - HumanMaleDCS
+    - _recipeName: MaleHair2
+      _enabledInDefaultWardrobe: 1
+      _compatibleRaces:
+      - HumanMale
   raceAnimationControllers:
     defaultAnimationController: {fileID: 0}
     animators: []
@@ -35340,7 +35340,6 @@ SceneRoots:
   - {fileID: 871310290347680838}
   - {fileID: 942326025}
   - {fileID: 8709505826531269980}
-  - {fileID: 122442904}
   - {fileID: 72684297}
   - {fileID: 1894944481}
   - {fileID: 1444025323}

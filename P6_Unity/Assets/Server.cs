@@ -80,6 +80,7 @@ public class Server : MonoBehaviour
         private RawImage rawPeopleToSend;
 
         public GameObject hoomanManager;
+        public LoadingScreen loadingScreen;
 
         private List<float> hsvHolder = new List<float>{0, 255, 255};
 
@@ -440,9 +441,9 @@ public class Server : MonoBehaviour
                     PutTheClothes();
                     hoomanManager.GetComponent<ColorChangerPerhaps>().ChangeHair(ClothingDetectionData.CurrentHairType);
                     PutTheColorOn();
-                    
-                    
 
+
+                    loadingScreen.hasLoaded = true; // Så' vi færdige :)
                 });
             });
         }
@@ -510,8 +511,6 @@ public class Server : MonoBehaviour
             foreach (var Clothes in ClothingDetectionData.CurrentClothes)
             {
                 ColorChangerPerhaps temp = hoomanManager.GetComponent<ColorChangerPerhaps>();
-                temp.ChangeClothing(Clothes.label);
-                temp.isGuy = !temp.isGuy;
                 temp.ChangeClothing(Clothes.label);
                 
                 Debug.Log($"I put {Clothes.label} on");

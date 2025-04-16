@@ -3,26 +3,27 @@ using UMA;
 using UMA.CharacterSystem;
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class ColorChangerPerhaps : MonoBehaviour
 {
     [Header ("The Hoomans")]
     public GameObject guy, gal; // The two models
-    public bool isGuy; // Gender, sex, osv...
 
     [Header ("The Other Stuff")]
-    public DynamicCharacterAvatar avatarScript;
+    public DynamicCharacterAvatar guyScript, galScript;
     UMATextRecipe clothItem;
 
     string UMABodyPart;
     public string TestChangeSTRING;
 
-    string testColor = "#8f746e";
+    string testColor = "#332c2d";
     string testHairType = "short";
 
     void Start()
     {
-    
+        guyScript = guy.GetComponent<DynamicCharacterAvatar>();
+        galScript = gal.GetComponent<DynamicCharacterAvatar>();
     }
 
     void Update()
@@ -38,71 +39,70 @@ public class ColorChangerPerhaps : MonoBehaviour
         }
 
         //clothItem = avatarScript.GetWardrobeItem("MaleShirt2");
-
-        ChooseGenderAvatar();
     }
 
-    public void ChooseGenderAvatar()
-    {
-        if (isGuy == true)
-        {
-            avatarScript = guy.GetComponent<DynamicCharacterAvatar>();
-            //gal.SetActive(false);
-            //guy.SetActive(true);
-        }
-        else
-        {
-            avatarScript = gal.GetComponent<DynamicCharacterAvatar>();
-            //gal.SetActive(true);
-            //guy.SetActive(false);
-        }
-    }
-
-    public string ChooseClothing(string clothingType)
-    {
-        //['shirt, blouse', 'top, t-shirt, sweatshirt', 'sweater', 'cardigan', 'jacket',
-        //'vest', 'pants', 'shorts', 'skirt', 'coat', 'dress', 'jumpsuit', 'cape', 'glasses',
-        //'hat', 'headband, head covering, hair accessory', 'tie', 'glove', 'watch', 'belt',
-        //'leg warmer', 'tights, stockings', 'sock', 'shoe', 'bag, 'scarf', 'umbrella', 'hood', 'collar']
-
-        if(isGuy == true)
-        {
-            return MaleClothing(clothingType);
-        }
-        else
-        {
-            return FemaleClothing(clothingType);
-        }
-    }
-
-    public void ChangeHair(string hairType)
+    public void ChangeGuyHair(string hairType)
     {
         //Skitf hår baseret på hairType variablen
         if (hairType == "short")
         {
-            avatarScript.SetSlot("Hair", "MaleHairSlick01_Recipe"); // <-- Input kort hår recipe
+            guyScript.SetSlot("Hair", "MaleHairSlick01_Recipe"); // <-- Input kort hår recipe
         }
         else if (hairType == "long")
         {
-            avatarScript.SetSlot("Hair", "FemaleHair3"); // <-- Input lang hår recipe
+            guyScript.SetSlot("Hair", "MaleHair2"); // <-- Input lang hår recipe
         }
         else
         {
-            avatarScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
+            guyScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
         }
-        avatarScript.BuildCharacter();
+        guyScript.BuildCharacter();
+    }
+
+    public void ChangeGalHair(string hairType)
+    {
+        
+        if (hairType == "short")
+        {
+            galScript.SetSlot("Hair", "FemaleHair2"); // <-- Input kort hår recipe
+        }
+        else if (hairType == "long")
+        {
+            galScript.SetSlot("Hair", "FemaleHair3"); // <-- Input lang hår recipe
+        }
+        else
+        {
+            galScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
+        }
+        galScript.BuildCharacter();
+    }
+
+    public void ChangeHair(string hairType) // Det er den her vi kalder
+    {
+        ChangeGuyHair(hairType);
+        ChangeGalHair(hairType);
     }
 
     public void ChangeClothing(string clothing)
     {
-        string chosenCloth = ChooseClothing(clothing);
+        string chosenCloth = MaleClothing(clothing); // Guy først
 
         //Skift tøj baseret på clothing variablen
         if(chosenCloth != "")
         {
-            avatarScript.SetSlot(UMABodyPart, chosenCloth);
+            guyScript.SetSlot(UMABodyPart, chosenCloth);
         }
-        avatarScript.BuildCharacter();
+
+
+        chosenCloth = FemaleClothing(clothing); // Gal bagefter
+
+        if (chosenCloth != "")
+        {
+            galScript.SetSlot(UMABodyPart, chosenCloth);
+        }
+
+        guyScript.BuildCharacter();
+        galScript.BuildCharacter();
     }
 
     public void ChangeColor(string inputColor, string colorArea) //colorArea er gennemsnitsfarvens område. Fx "upper clothes"
@@ -122,32 +122,52 @@ public class ColorChangerPerhaps : MonoBehaviour
             //5: "Skirt", 6: "Pants", 7: "Dress", 8: "Belt", 9: "Left-shoe", 10: "Right-shoe", 11:
             //"Face", 12: "Left-leg", 13: "Right-leg", 14: "Left-arm", 15: "Right-arm", 16: "Bag", 17: "Scarf"
             case "Hair":
-                avatarScript.SetRawColor("Hair", cooked, true);
+                guyScript.SetColor("Hair", tempColor);
+
+                galScript.SetColor("Hair", tempColor);
                 break;
             case "Upper-clothes":
-                avatarScript.SetRawColor("Vest Color", raw, true);
-                avatarScript.SetRawColor("Shirt", raw, true);
-                avatarScript.SetRawColor("Coat", raw, true);
-                avatarScript.SetRawColor("Jacket", raw, true);
+                guyScript.SetRawColor("Vest Color", raw, true);
+                guyScript.SetRawColor("Shirt", raw, true);
+                guyScript.SetRawColor("Coat", raw, true);
+                guyScript.SetRawColor("Jacket", raw, true);
+
+                galScript.SetRawColor("Vest Color", raw, true);
+                galScript.SetRawColor("Shirt", raw, true);
+                galScript.SetRawColor("Coat", raw, true);
+                galScript.SetRawColor("Jacket", raw, true);
                 break;
             case "Pants":
-                avatarScript.SetRawColor("Trousers", raw, true);
-                avatarScript.SetRawColor("Pants", raw, true);
+                guyScript.SetRawColor("Trousers", raw, true);
+                guyScript.SetRawColor("Pants", raw, true);
+
+                galScript.SetRawColor("Trousers", raw, true);
+                galScript.SetRawColor("Pants", raw, true);
+                galScript.SetRawColor("Skirt", raw, true);
                 break;
             case "Left-shoe":
-                avatarScript.SetColor("Shoes", tempColor);
+                guyScript.SetColor("Shoes", tempColor);
+
+                galScript.SetColor("Shoes", tempColor);
                 break;
             case "Right-shoe":
-                avatarScript.SetColor("Shoes", tempColor);
+                guyScript.SetColor("Shoes", tempColor);
+
+                galScript.SetColor("Shoes", tempColor);
                 break;
             case "Face":
-                avatarScript.SetColor("Skin", tempColor);
+                guyScript.SetColor("Skin", tempColor);
+
+                galScript.SetColor("Skin", tempColor);
                 break;
             default:
                 break;
         }
-        avatarScript.UpdateColors();
-        avatarScript.BuildCharacter();
+        guyScript.UpdateColors();
+        guyScript.BuildCharacter();
+
+        galScript.UpdateColors();
+        galScript.BuildCharacter();
         Debug.Log("Changed color!");
     }
 

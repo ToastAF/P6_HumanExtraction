@@ -3278,6 +3278,85 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!1 &217923458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217923459}
+  - component: {fileID: 217923461}
+  - component: {fileID: 217923460}
+  m_Layer: 5
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &217923459
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217923458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456763807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 77.54001, y: -0.999979}
+  m_SizeDelta: {x: -27.319975, y: -2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &217923460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217923458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 93fe7de1fb127f5479062b48f650a66f, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 233
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Switch to Male
+--- !u!222 &217923461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217923458}
+  m_CullTransparentMesh: 1
 --- !u!1 &219540639
 GameObject:
   m_ObjectHideFlags: 0
@@ -4536,6 +4615,7 @@ GameObject:
   - component: {fileID: 295263988}
   - component: {fileID: 295263987}
   - component: {fileID: 295263986}
+  - component: {fileID: 295263989}
   m_Layer: 0
   m_Name: The One that changes the Hoomans
   m_TagString: Untagged
@@ -4573,8 +4653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guy: {fileID: 1342538083}
   gal: {fileID: 1832691381}
-  isGuy: 1
-  avatarScript: {fileID: 0}
+  guyScript: {fileID: 0}
+  galScript: {fileID: 0}
   TestChangeSTRING: 
 --- !u!4 &295263988
 Transform:
@@ -4591,6 +4671,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295263989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295263985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f117e015ec25567429ffcee048fe5747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guy: {fileID: 1342538083}
+  gal: {fileID: 1832691381}
+  loadingScreen: {fileID: 532757911}
+  hasLoaded: 0
+  guyIsActive: 0
 --- !u!1 &296796636
 GameObject:
   m_ObjectHideFlags: 0
@@ -8012,7 +8109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &473209287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8157,6 +8254,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGal
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9282,6 +9391,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530109178}
+  m_CullTransparentMesh: 1
+--- !u!1 &532757911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532757912}
+  - component: {fileID: 532757914}
+  - component: {fileID: 532757913}
+  m_Layer: 5
+  m_Name: LOADING SCREEN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &532757912
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532757911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 15.5, y: 8.71875, z: 15.5}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1502751029}
+  m_Father: {fileID: 1990578171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.001709, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &532757913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532757911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28627452, g: 0.28627452, b: 0.28627452, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &532757914
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532757911}
   m_CullTransparentMesh: 1
 --- !u!1 &532893522
 GameObject:
@@ -11615,8 +11800,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1450709732}
   m_HandleRect: {fileID: 1450709730}
   m_Direction: 3
-  m_Value: 1
-  m_Size: 0.50560176
+  m_Value: 0
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15122,34 +15307,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1832691381}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 473209288}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-        m_MethodName: set_isOn
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1763399288}
         m_TargetAssemblyTypeName: Server, Assembly-CSharp
         m_MethodName: sendPeopleCommand
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 882681100}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 532757911}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18298,34 +18495,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342538083}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1695143774}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
-        m_MethodName: set_isOn
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1763399288}
         m_TargetAssemblyTypeName: Server, Assembly-CSharp
         m_MethodName: sendPeopleCommand
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGuy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 882681100}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 532757911}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21473,6 +21682,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &1195732351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195732352}
+  - component: {fileID: 1195732354}
+  - component: {fileID: 1195732353}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1195732352
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195732351}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1373222369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 42.87964, y: -14.823196}
+  m_SizeDelta: {x: 85.7593, y: 29.6465}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1195732353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195732351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.7528302, b: 0.7528302, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1195732354
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195732351}
+  m_CullTransparentMesh: 1
 --- !u!1 &1198778719
 GameObject:
   m_ObjectHideFlags: 0
@@ -22289,6 +22573,81 @@ Transform:
   - {fileID: 1509513613}
   m_Father: {fileID: 126375683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1245620620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245620621}
+  - component: {fileID: 1245620623}
+  - component: {fileID: 1245620622}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1245620621
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245620620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456763807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 42.87964, y: -14.8232}
+  m_SizeDelta: {x: 85.7593, y: 29.6465}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1245620622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245620620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8509433, g: 0.98087275, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1245620623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245620620}
+  m_CullTransparentMesh: 1
 --- !u!1 &1246962983
 GameObject:
   m_ObjectHideFlags: 0
@@ -24166,12 +24525,11 @@ MonoBehaviour:
     dnaValues:
     - dnaTypeHash: 815443803
     slotDataList:
-    - asset: {fileID: 11400000, guid: f44f393c2761113499160bf3976bea56, type: 2}
+    - asset: {fileID: 11400000, guid: d875ad325d19b924f961f76ec21a1737, type: 2}
       overlayScale: 1
       tags:
-      - Torso
+      - Eyes
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -24195,137 +24553,59 @@ MonoBehaviour:
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      altMaterial: {fileID: 11400000, guid: 8e29dbac5d2e82f44a759a7e2cc568ab, type: 2}
       BlendshapeSlotNames: []
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 88189b4b69536ab4ea34e6b2974baed7, type: 2}
+    - asset: {fileID: 11400000, guid: deb3453bc9bb8564aa6e03f0fe057a91, type: 2}
       overlayScale: 1
       tags:
-      - Feet
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 0
-      vertexOffset: 758
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: fa24076dd31d7334bb7741205a3b439c, type: 2}
-      overlayScale: 1
-      tags:
-      - Hands
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 0
-      vertexOffset: 1218
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: 37b3e7011ea87d7479417712563fbec8, type: 2}
-      overlayScale: 1
-      tags:
-      - Legs
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 0
-      vertexOffset: 1940
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: bdd55e27c6850d64fb01592e11424e79, type: 2}
-      overlayScale: 1
-      tags:
+      - InnerMouth
+      - Mouth
       - Head
-      - Face
-      - smooshtarget
       Races: []
-      meshModifiers: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 0
+      vertexOffset: 194
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 0}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: f44f393c2761113499160bf3976bea56, type: 2}
+      overlayScale: 1
+      tags:
+      - Torso
+      Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -24343,27 +24623,177 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 2448
+      vertexOffset: 570
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
-      UVSet: 1
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: 88189b4b69536ab4ea34e6b2974baed7, type: 2}
+      overlayScale: 1
+      tags:
+      - Feet
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 1328
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: fa24076dd31d7334bb7741205a3b439c, type: 2}
+      overlayScale: 1
+      tags:
+      - Hands
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 1788
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: 37b3e7011ea87d7479417712563fbec8, type: 2}
+      overlayScale: 1
+      tags:
+      - Legs
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 2510
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: bdd55e27c6850d64fb01592e11424e79, type: 2}
+      overlayScale: 1
+      tags:
+      - Head
+      - Face
+      - smooshtarget
+      Races: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 1
+      vertexOffset: 3018
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
       altMaterial: {fileID: 0}
       BlendshapeSlotNames: []
       Suppressed: 0
       dontSerialize: 0
       rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: d875ad325d19b924f961f76ec21a1737, type: 2}
+    - asset: {fileID: 11400000, guid: 5d95a711691eb7c499b2676fdfeb6be2, type: 2}
       overlayScale: 1
       tags:
-      - Eyes
+      - EyeLash
+      - Head
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -24381,52 +24811,12 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 5648
+      vertexOffset: 6248
       UVArea:
         serializedVersion: 2
-        x: 0
+        x: 0.5
         y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 8e29dbac5d2e82f44a759a7e2cc568ab, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: deb3453bc9bb8564aa6e03f0fe057a91, type: 2}
-      overlayScale: 1
-      tags:
-      - InnerMouth
-      - Mouth
-      - Head
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0
-      smooshDistance: 0
-      smooshInvertX: 0
-      smooshInvertY: 0
-      smooshInvertZ: 0
-      smooshInvertDist: 0
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: 
-      skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 5842
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
+        width: 0.25
         height: 1
       tempHidden: 0
       isDisabled: 0
@@ -24441,7 +24831,6 @@ MonoBehaviour:
       tags:
       - Eyebrows
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -24458,52 +24847,13 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 4
+      submeshIndex: 2
       vertexOffset: 6218
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 0}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: fecb11cda78ad5743a2886ebc787630e, type: 2}
-      overlayScale: 1
-      tags:
-      - Eyelash
-      - Head
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0.01
-      smooshDistance: 0.001
-      smooshInvertX: 0
-      smooshInvertY: 1
-      smooshInvertZ: 0
-      smooshInvertDist: 1
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: LongHair
-      skinnedMeshRenderer: 0
-      submeshIndex: 5
-      vertexOffset: 6248
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
+        width: 0.5
         height: 1
       tempHidden: 0
       isDisabled: 0
@@ -24531,42 +24881,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#FD151500;_SSSCol
             name: _SSSCol
             Value: {r: 0.99215686, g: 0.08235294, b: 0.08235294, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24586,54 +24922,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.5000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 0.5
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24653,14 +24972,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -24669,8 +24985,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Hair
       channelMask:
@@ -24689,8 +25003,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Eyes
       channelMask:
@@ -24709,33 +25021,7 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
-    - name: Tattoo
-      channelMask:
-      - {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      channelAdditiveMask:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      PropertyBlock:
-        alwaysUpdate: 0
-        alwaysUpdateParms: 0
-        serializedProperties: []
-      foldout: 0
-      showAdvanced: 0
-      isBaseColor: 0
-      deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
-      displayColor: {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
     - name: Undies
       channelMask:
       - {r: 1, g: 1, b: 1, a: 1}
@@ -24753,8 +25039,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
   animator: {fileID: 0}
   KeepAvatar: 0
@@ -24877,42 +25161,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#FD151500;_SSSCol
             name: _SSSCol
             Value: {r: 0.99215686, g: 0.08235294, b: 0.08235294, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24932,54 +25202,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.5000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 0.5
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24999,14 +25252,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -25015,8 +25265,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25040,8 +25288,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25065,8 +25311,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25094,8 +25338,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25119,8 +25361,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25144,8 +25384,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25169,8 +25407,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25194,8 +25430,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25219,8 +25453,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25244,8 +25476,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25269,8 +25499,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -25301,7 +25529,6 @@ MonoBehaviour:
   customRotation: {x: 0, y: 0, z: 0}
   previewColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _buildCharacterEnabled: 1
-  nextBuildSlotsOnly: 0
   debugVertexes: 1
 --- !u!4 &1342538086
 Transform:
@@ -25679,6 +25906,172 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368430943}
   m_CullTransparentMesh: 1
+--- !u!1 &1373222368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373222369}
+  - component: {fileID: 1373222370}
+  m_Layer: 5
+  m_Name: Female NEW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1373222369
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373222368}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1195732352}
+  - {fileID: 2058680737}
+  m_Father: {fileID: 2024227728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -214, y: 738}
+  m_SizeDelta: {x: 160, y: 33.0842}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1373222370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373222368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1867192367}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1919350688}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1920133570}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 385197403}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3960082}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 285297241}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1385931893
 GameObject:
   m_ObjectHideFlags: 0
@@ -26810,8 +27203,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 328089628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.50560176}
+  m_AnchorMin: {x: 0, y: 0.000000059604645}
+  m_AnchorMax: {x: 1, y: 0.99999994}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26935,6 +27328,172 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &1456763806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456763807}
+  - component: {fileID: 1456763808}
+  m_Layer: 5
+  m_Name: Male NEW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456763807
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456763806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1245620621}
+  - {fileID: 217923459}
+  m_Father: {fileID: 2024227728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -214, y: 774}
+  m_SizeDelta: {x: 160, y: 33.0842}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1456763808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456763806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1867192367}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1919350688}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1920133570}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 385197403}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3960082}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 285297241}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGuy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1457127412
 GameObject:
   m_ObjectHideFlags: 0
@@ -27370,6 +27929,104 @@ Transform:
   - {fileID: 840223904}
   m_Father: {fileID: 1303233997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1502751028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502751029}
+  - component: {fileID: 1502751032}
+  - component: {fileID: 1502751031}
+  - component: {fileID: 1502751030}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1502751029
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502751028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.16883118, z: 0.16883118}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 532757912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -2.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1502751030
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502751028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8e4d04790eacc40b50fe89a94b9c52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1502751031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502751028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1f4c32ecfaf254a4aa6effc0c4991560, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1502751032
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502751028}
+  m_CullTransparentMesh: 1
 --- !u!1 &1504621996
 GameObject:
   m_ObjectHideFlags: 0
@@ -29461,7 +30118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1695143774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29585,6 +30242,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 295263989}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: ChangeActivePersonToGuy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -29984,8 +30653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guy: {fileID: 1342538083}
   gal: {fileID: 1832691381}
-  isGuy: 0
-  avatarScript: {fileID: 0}
+  guyScript: {fileID: 0}
+  galScript: {fileID: 0}
   TestChangeSTRING: 
 --- !u!1 &1706172572
 GameObject:
@@ -30626,6 +31295,7 @@ MonoBehaviour:
   rawImageReceived: {fileID: 0}
   imageContainer: {fileID: 1400106982}
   hoomanManager: {fileID: 295263985}
+  loadingScreen: {fileID: 0}
 --- !u!4 &1763399289
 Transform:
   m_ObjectHideFlags: 0
@@ -31622,7 +32292,6 @@ MonoBehaviour:
       - Eyelash
       - Head
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31660,7 +32329,6 @@ MonoBehaviour:
       tags:
       - Eyes
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31698,7 +32366,6 @@ MonoBehaviour:
       tags:
       - Feet
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31736,7 +32403,6 @@ MonoBehaviour:
       tags:
       - Hands
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31776,7 +32442,6 @@ MonoBehaviour:
       - Head
       - Mouth
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31814,7 +32479,6 @@ MonoBehaviour:
       tags:
       - Legs
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31852,7 +32516,6 @@ MonoBehaviour:
       tags:
       - Torso
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31890,7 +32553,6 @@ MonoBehaviour:
       tags:
       - Head
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -31941,42 +32603,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;1.0000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 1
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -31996,54 +32644,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAFloatProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#E0441B00;_SSSCol
             name: _SSSCol
             Value: {r: 0.8784314, g: 0.26666668, b: 0.105882354, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32063,54 +32694,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.4000;_GlossMapScale
+        - p11:
             name: _GlossMapScale
             Value: 0.4
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32130,14 +32744,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -32146,8 +32757,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Hair
       channelMask:
@@ -32166,8 +32775,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Eyes
       channelMask:
@@ -32186,8 +32793,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
   animator: {fileID: 1832691387}
   KeepAvatar: 0
@@ -32310,42 +32915,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;1.0000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 1
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32365,54 +32956,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAFloatProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#E0441B00;_SSSCol
             name: _SSSCol
             Value: {r: 0.8784314, g: 0.26666668, b: 0.105882354, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32432,54 +33006,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.4000;_GlossMapScale
+        - p11:
             name: _GlossMapScale
             Value: 0.4
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32499,14 +33056,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -32515,8 +33069,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32540,8 +33092,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32565,8 +33115,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32594,8 +33142,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32619,8 +33165,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32644,8 +33188,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32669,8 +33211,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32694,8 +33234,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32719,8 +33257,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32744,8 +33280,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32773,8 +33307,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32802,8 +33334,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32827,8 +33357,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32852,8 +33380,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.32941177, g: 0.32156864, b: 0.5058824, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32877,8 +33403,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32902,8 +33426,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32927,8 +33449,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.64705884, g: 0.14509805, b: 0.9098039, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32952,8 +33472,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -32984,7 +33502,6 @@ MonoBehaviour:
   customRotation: {x: 0, y: 0, z: 0}
   previewColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _buildCharacterEnabled: 1
-  nextBuildSlotsOnly: 0
   debugVertexes: 1
 --- !u!95 &1832691387
 Animator:
@@ -36212,6 +36729,7 @@ RectTransform:
   - {fileID: 280967329}
   - {fileID: 442421123}
   - {fileID: 1757512473}
+  - {fileID: 532757912}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -36673,7 +37191,9 @@ RectTransform:
   m_Children:
   - {fileID: 530109179}
   - {fileID: 1695143775}
+  - {fileID: 1456763807}
   - {fileID: 473209287}
+  - {fileID: 1373222369}
   - {fileID: 167542723}
   - {fileID: 497736593}
   m_Father: {fileID: 1396691194}
@@ -37136,6 +37656,87 @@ Transform:
   - {fileID: 867998709}
   m_Father: {fileID: 823127130}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2058680736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058680737}
+  - component: {fileID: 2058680739}
+  - component: {fileID: 2058680738}
+  m_Layer: 5
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058680737
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058680736}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1373222369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 77.54001, y: -0.9999771}
+  m_SizeDelta: {x: -27.319975, y: -2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2058680738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058680736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 93fe7de1fb127f5479062b48f650a66f, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 233
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Switch to Female
+
+'
+--- !u!222 &2058680739
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058680736}
+  m_CullTransparentMesh: 1
 --- !u!1 &2065760299
 GameObject:
   m_ObjectHideFlags: 0
