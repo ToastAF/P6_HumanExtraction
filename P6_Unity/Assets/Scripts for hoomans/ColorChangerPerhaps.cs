@@ -299,7 +299,7 @@ public class ColorChangerPerhaps : MonoBehaviour
                 UMABodyPart = "Legs";
                 return "F_Mini_Skirt_2";
             case "coat":
-                UMABodyPart = "Chest";
+                UMABodyPart = "FullOutfit";
                 return "F_Coat_3";
             case "dress":
                 UMABodyPart = "Chest";
