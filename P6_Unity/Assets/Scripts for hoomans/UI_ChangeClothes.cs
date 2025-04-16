@@ -9,6 +9,7 @@ public class UI_ChangeClothes : MonoBehaviour
     DynamicCharacterAvatar dcaGuy, dcaGal;
 
     public TMP_Text maleUpperClothesDropdownLabel, maleLowerClothesDropdownLabel, femaleUpperClothesDropdownLabel, femaleLowerClothesDropdownLabel;
+    public TMP_Text maleShoesDropdownLabel, femaleShoesDropdownLabel;
 
     string convertedString;
 
@@ -62,7 +63,7 @@ public class UI_ChangeClothes : MonoBehaviour
     {
         ClearClothes("Feet");
 
-        convertedString = ChooseClothes(femaleLowerClothesDropdownLabel);
+        convertedString = ChooseClothes(maleShoesDropdownLabel);
 
         otherScript.ChangeClothing(convertedString);
     }
@@ -71,7 +72,7 @@ public class UI_ChangeClothes : MonoBehaviour
     {
         ClearClothes("Feet");
 
-        convertedString = ChooseClothes(femaleLowerClothesDropdownLabel);
+        convertedString = ChooseClothes(femaleShoesDropdownLabel);
 
         otherScript.ChangeClothing(convertedString);
     }
@@ -89,6 +90,9 @@ public class UI_ChangeClothes : MonoBehaviour
         ClearClothes("FullOutfit");
         ClearClothes("Legs");
         ClearClothes("Feet");
+
+        dcaGuy.BuildCharacter();
+        dcaGal.BuildCharacter();
     }
 
     public string ChooseClothes(TMP_Text dropdownText)
