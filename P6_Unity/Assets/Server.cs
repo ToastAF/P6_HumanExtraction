@@ -78,6 +78,7 @@ public class Server : MonoBehaviour
         public Transform imageContainer;  // Parent transform for spawned images
         private int checkmarkCount = 0;
         private RawImage rawPeopleToSend;
+        public RawImage displayImage;
 
         public GameObject hoomanManager;
         public LoadingScreen loadingScreen;
@@ -462,6 +463,10 @@ public class Server : MonoBehaviour
             checkmark.SetActive(true);
             checkmarkCount = 1;
             rawPeopleToSend = button.GetComponentInChildren<RawImage>();
+            displayImage.texture = button.GetComponentInChildren<RawImage>().texture;
+
+            displayImage.GetComponent<AspectRatioFitter>().aspectRatio =
+                button.GetComponentInChildren<AspectRatioFitter>().aspectRatio;
         }
         else if (checkmark.activeSelf && checkmarkCount == 1)
         {
