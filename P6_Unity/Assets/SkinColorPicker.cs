@@ -3,7 +3,7 @@ using UnityEngine;
 public class SkinColorPicker : MonoBehaviour
 {
     public FlexibleColorPicker fcp;
-    public ColorChangerPerhaps ColorChanger;
+    public ColorAndClothesChanger ColorChanger;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +18,6 @@ public class SkinColorPicker : MonoBehaviour
 
     public void ApplySkinButton()
     {
-        ColorChanger.ChangeColor(fcp.hexInput.text, "Face");
+        ColorChanger.ChangeColor(fcp.hexInput.text, "FaceInUI");
     }
 }

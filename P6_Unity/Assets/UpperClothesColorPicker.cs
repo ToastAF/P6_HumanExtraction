@@ -3,7 +3,7 @@ using UnityEngine;
 public class UpperClothesColorPicker : MonoBehaviour
 {
     public FlexibleColorPicker fcp;
-    public ColorChangerPerhaps ColorChanger;
+    public ColorAndClothesChanger ColorChanger;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

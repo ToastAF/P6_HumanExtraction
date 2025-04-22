@@ -440,7 +440,7 @@ public class Server : MonoBehaviour
                     LogColorData();
                     
                     PutTheClothes();
-                    hoomanManager.GetComponent<ColorChangerPerhaps>().ChangeHair(ClothingDetectionData.CurrentHairType);
+                    hoomanManager.GetComponent<ColorAndClothesChanger>().ChangeHair(ClothingDetectionData.CurrentHairType);
                     PutTheColorOn();
 
 
@@ -515,7 +515,7 @@ public class Server : MonoBehaviour
         {
             foreach (var Clothes in ClothingDetectionData.CurrentClothes)
             {
-                ColorChangerPerhaps temp = hoomanManager.GetComponent<ColorChangerPerhaps>();
+                ColorAndClothesChanger temp = hoomanManager.GetComponent<ColorAndClothesChanger>();
                 temp.ChangeClothing(Clothes.label);
                 
                 Debug.Log($"I put {Clothes.label} on");
@@ -526,7 +526,7 @@ public class Server : MonoBehaviour
         {
             foreach (var Cloth in ClothingColorManager.CurrentColors)
             {
-                hoomanManager.GetComponent<ColorChangerPerhaps>().ChangeColor(Cloth.hex,Cloth.label);
+                hoomanManager.GetComponent<ColorAndClothesChanger>().ChangeColor(Cloth.hex,Cloth.label);
                 Debug.Log($"I change color of {Cloth.label} to be {Cloth.hex}!");
             }
         }

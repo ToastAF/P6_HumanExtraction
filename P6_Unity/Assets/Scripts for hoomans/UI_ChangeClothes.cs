@@ -5,7 +5,7 @@ using UMA.CharacterSystem;
 
 public class UI_ChangeClothes : MonoBehaviour
 {
-    ColorChangerPerhaps otherScript; // ColorChangerPerhaps scriptet på samme objekt
+    ColorAndClothesChanger otherScript; // ColorChangerPerhaps scriptet på samme objekt
     DynamicCharacterAvatar dcaGuy, dcaGal;
 
     public TMP_Text maleUpperClothesDropdownLabel, maleLowerClothesDropdownLabel, femaleUpperClothesDropdownLabel, femaleLowerClothesDropdownLabel;
@@ -15,7 +15,7 @@ public class UI_ChangeClothes : MonoBehaviour
 
     private void Start()
     {
-        otherScript = GetComponent<ColorChangerPerhaps>();
+        otherScript = GetComponent<ColorAndClothesChanger>();
         dcaGuy = otherScript.guy.GetComponent<DynamicCharacterAvatar>();
         dcaGal = otherScript.gal.GetComponent<DynamicCharacterAvatar>();
     }
