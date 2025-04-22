@@ -122,7 +122,7 @@ public class UI_ChangeClothes : MonoBehaviour
                 return "skirt";
 
             case "Shoes":
-                return "";
+                return "shoe";
 
             default:
                 return "";
