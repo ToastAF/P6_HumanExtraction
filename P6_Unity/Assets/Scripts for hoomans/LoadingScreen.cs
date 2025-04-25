@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class LoadingScreen : MonoBehaviour
 {
-    public GameObject guy, gal, loadingScreen;
+    public GameObject guy, gal, loadingScreen, modelTab, peopleTab;
 
     public bool hasLoaded = false;
     public bool guyIsActive;
+    public bool loadedPage;
 
 
     void Start()
@@ -30,9 +31,23 @@ public class LoadingScreen : MonoBehaviour
             }
 
             loadingScreen.SetActive(false);
+            if (!loadedPage)
+            {
+                modelTab.SetActive(true);
+                peopleTab.SetActive(false);
+                loadedPage = true;
+            }
+
+            
+
         }
+        loadedPage = false;
     }
 
+    public void ChangeHasLoaded()
+    {
+        hasLoaded = false;
+    }
     public void ChangeActivePersonToGuy()
     {
         guyIsActive = true;
