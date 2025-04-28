@@ -73,10 +73,7 @@ public class LoadingScreen : MonoBehaviour
 
     public void DestroyChildren()
     {
-        while(childrenHolder.transform.childCount > 0)
-        {
-            Destroy(childrenHolder.transform.GetChild(0));
-        }
+        childrenHolder.transform.DestroyAllChildren();
         Debug.Log("I destroyed all the children! :D");
     }
 }
