@@ -772,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 54705910}
   serializedVersion: 2
   m_LocalRotation: {x: -0.018163124, y: -0.002392277, z: -0.01060976, w: 0.9997759}
-  m_LocalPosition: {x: -0.040479098, y: 0.000000018531779, z: -0.000000068716524}
+  m_LocalPosition: {x: -0.040479098, y: 0.000000018531779, z: -0.00000006871652}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999964}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1973,7 +1973,7 @@ Transform:
   m_GameObject: {fileID: 126375682}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4972366, y: 0.00000021606681, z: 0.867615, w: 0.00000008940695}
-  m_LocalPosition: {x: -0.044175852, y: -0.00009392594, z: 0.053631872}
+  m_LocalPosition: {x: -0.044175856, y: -0.00009392593, z: 0.05363187}
   m_LocalScale: {x: 1.0006862, y: 1.0006863, z: 1.0006864}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2152,7 +2152,7 @@ Transform:
   m_GameObject: {fileID: 137248717}
   serializedVersion: 2
   m_LocalRotation: {x: -0.14769399, y: -0.07378268, z: 0.98596525, w: 0.024803014}
-  m_LocalPosition: {x: 0.016968042, y: -0.110952556, z: 0.001985117}
+  m_LocalPosition: {x: 0.016968042, y: -0.110952556, z: 0.0019851166}
   m_LocalScale: {x: 0.98299915, y: 0.9929993, z: 0.99299985}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3603,7 +3603,7 @@ Transform:
   m_GameObject: {fileID: 239012574}
   serializedVersion: 2
   m_LocalRotation: {x: -0.065804705, y: 0.10070218, z: -0.009621298, w: 0.9926914}
-  m_LocalPosition: {x: -0.26411498, y: 0.00000019394875, z: -0.0000000051023803}
+  m_LocalPosition: {x: -0.26411498, y: 0.00000019394875, z: -0.00000000510238}
   m_LocalScale: {x: 1.0078585, y: 1.0078588, z: 1.0078589}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3957,8 +3957,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271769566}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01108421, y: -0.176239, z: -0.032898627, w: 0.98373514}
-  m_LocalPosition: {x: -0.43592814, y: 0.00000040307827, z: 0.00000005038479}
+  m_LocalRotation: {x: -0.011083846, y: -0.1762382, z: -0.03289844, w: 0.98373526}
+  m_LocalPosition: {x: -0.43592814, y: 0.0000004318696, z: 0.000000053983708}
   m_LocalScale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4210,8 +4210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282025239}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13632865, y: -0.06044288, z: 0.988273, w: 0.032827202}
-  m_LocalPosition: {x: 0.017580131, y: -0.10129675, z: 0.0031646688}
+  m_LocalRotation: {x: -0.1363282, y: -0.060443074, z: 0.988273, w: 0.032827176}
+  m_LocalPosition: {x: 0.01758013, y: -0.101296745, z: 0.0031646695}
   m_LocalScale: {x: 0.9999998, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4432,8 +4432,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294733667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.023062833, y: -0.19410253, z: -0.03790062, w: 0.9799775}
-  m_LocalPosition: {x: -0.444777, y: 0.00000031956418, z: 0.00000006173395}
+  m_LocalRotation: {x: 0.023062838, y: -0.19410253, z: -0.037900638, w: 0.9799775}
+  m_LocalPosition: {x: -0.444777, y: 0.00000031956415, z: 0.00000006173396}
   m_LocalScale: {x: 0.99999976, y: 0.99999994, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4529,6 +4529,7 @@ MonoBehaviour:
   imageTab: {fileID: 280967328}
   modelTab: {fileID: 1757512472}
   peopleTab: {fileID: 442421122}
+  childrenHolder: {fileID: 1400106981}
   hasFoundPeople: 0
   hasLoaded: 0
   guyIsActive: 0
@@ -4572,9 +4573,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296796636}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000407916, y: 0.0000000049358135, z: -0.000684441, w: 0.99999976}
-  m_LocalPosition: {x: -0.000019617453, y: 0.000058837457, z: 0.00003910778}
-  m_LocalScale: {x: 1.0019608, y: 1.0019608, z: 1.0019608}
+  m_LocalRotation: {x: 0.00000040791252, y: 0.0000000052150124, z: -0.0013688939, w: 0.9999991}
+  m_LocalPosition: {x: -0.000039225593, y: 0.000117661875, z: -0.0024314795}
+  m_LocalScale: {x: 1.0471473, y: 1.0471473, z: 1.0471473}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 334133714}
@@ -5052,7 +5053,7 @@ Transform:
   m_GameObject: {fileID: 337927419}
   serializedVersion: 2
   m_LocalRotation: {x: -0.018308224, y: 0.01630838, z: -0.010148703, w: -0.99964786}
-  m_LocalPosition: {x: -0.040479295, y: 0.000000036004636, z: 0.00000022547611}
+  m_LocalPosition: {x: -0.040479295, y: 0.000000036004632, z: 0.0000002254761}
   m_LocalScale: {x: 0.9999997, y: 0.9999999, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5239,8 +5240,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350846325}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.80153763, y: 0.033662096, z: -0.59640414, w: -0.026578192}
-  m_LocalPosition: {x: -0.48038894, y: -0.000000116297514, z: 0.000000098126016}
+  m_LocalRotation: {x: 0.8015381, y: 0.03366211, z: -0.59640354, w: -0.026578091}
+  m_LocalPosition: {x: -0.4803889, y: -0.00000011629751, z: 0.00000009812601}
   m_LocalScale: {x: 0.8588258, y: 0.8588258, z: 1.0299175}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5304,7 +5305,7 @@ Transform:
   m_GameObject: {fileID: 361835235}
   serializedVersion: 2
   m_LocalRotation: {x: -0.050335806, y: 0.17848022, z: -0.04365866, w: -0.9816848}
-  m_LocalPosition: {x: -0.031863175, y: -0.00000003044509, z: -0.0000005102742}
+  m_LocalPosition: {x: -0.031863175, y: -0.00000003044509, z: -0.00000051027416}
   m_LocalScale: {x: 0.99999994, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5336,7 +5337,7 @@ Transform:
   m_GameObject: {fileID: 363943248}
   serializedVersion: 2
   m_LocalRotation: {x: 0.71245664, y: 0.000003157182, z: -0.7017162, w: -0.000004015861}
-  m_LocalPosition: {x: -0.1066259, y: 0.034980282, z: 0.117987484}
+  m_LocalPosition: {x: -0.10662591, y: 0.03498028, z: 0.11798748}
   m_LocalScale: {x: 0.9319945, y: 0.9319944, z: 0.9319945}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5835,7 +5836,7 @@ Transform:
   m_GameObject: {fileID: 383452965}
   serializedVersion: 2
   m_LocalRotation: {x: 0.047865596, y: 0.20582995, z: 0.056430824, w: -0.97578603}
-  m_LocalPosition: {x: -0.038383897, y: 0.00000004024046, z: 0.00000007999035}
+  m_LocalPosition: {x: -0.038383897, y: 0.00000004024046, z: 0.000000079990365}
   m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 1.0000004}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6488,7 +6489,7 @@ Transform:
   m_GameObject: {fileID: 420308484}
   serializedVersion: 2
   m_LocalRotation: {x: -0.8027835, y: 0.06554671, z: 0.010156312, w: 0.59257}
-  m_LocalPosition: {x: -0.29989377, y: -0.00000013121615, z: 0.000000011290278}
+  m_LocalPosition: {x: -0.29989377, y: -0.00000013121615, z: 0.000000011290279}
   m_LocalScale: {x: 0.826759, y: 0.826759, z: 0.826759}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7550,7 +7551,7 @@ Transform:
   m_GameObject: {fileID: 462082836}
   serializedVersion: 2
   m_LocalRotation: {x: 0.05731216, y: 0.13909285, z: 0.010532077, w: 0.9885634}
-  m_LocalPosition: {x: -0.2779641, y: -0.00000069066795, z: 0.000000023826413}
+  m_LocalPosition: {x: -0.27796406, y: -0.00000069066795, z: 0.000000023826413}
   m_LocalScale: {x: 1.007843, y: 1.007843, z: 1.0078433}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10274,9 +10275,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577118998}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000041909252, y: 0.00000000401214, z: 0.0006844578, w: 0.99999976}
-  m_LocalPosition: {x: -0.000019595102, y: -0.000058834663, z: 0.00003921628}
-  m_LocalScale: {x: 1.0019608, y: 1.0019608, z: 1.0019608}
+  m_LocalRotation: {x: -0.0000004190897, y: 0.0000000042989883, z: 0.0013689107, w: 0.9999991}
+  m_LocalPosition: {x: -0.00003920324, y: -0.00011765908, z: -0.002431371}
+  m_LocalScale: {x: 1.0471473, y: 1.0471473, z: 1.0471473}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212717351}
@@ -10689,8 +10690,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616005598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.83223444, y: 0.01148727, z: -0.5474084, w: 0.087166786}
-  m_LocalPosition: {x: -0.4800849, y: 0.00000014528004, z: 0.00000002905601}
+  m_LocalRotation: {x: 0.8322345, y: 0.011487045, z: -0.5474081, w: 0.08716684}
+  m_LocalPosition: {x: -0.48008493, y: 0.00000014528005, z: 0.000000029056011}
   m_LocalScale: {x: 0.8588262, y: 0.858826, z: 1.0299177}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11968,7 +11969,7 @@ Transform:
   m_GameObject: {fileID: 697111224}
   serializedVersion: 2
   m_LocalRotation: {x: -0.06763761, y: -0.22699448, z: 0.047933623, w: 0.97036135}
-  m_LocalPosition: {x: -0.049446795, y: -0.00000005824274, z: -0.00000003489512}
+  m_LocalPosition: {x: -0.049446795, y: -0.00000005824274, z: -0.000000034895123}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12032,7 +12033,7 @@ Transform:
   m_GameObject: {fileID: 702700595}
   serializedVersion: 2
   m_LocalRotation: {x: -0.017248573, y: 0.059831433, z: 0.0009897575, w: 0.99805903}
-  m_LocalPosition: {x: -0.1910127, y: 0.000000014452294, z: -0.00000005716603}
+  m_LocalPosition: {x: -0.1910127, y: 0.0000000144522945, z: -0.00000005716603}
   m_LocalScale: {x: 0.9999998, y: 0.99999976, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12505,8 +12506,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739632808}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.11958806, y: 0.13071615, z: 0.9840487, w: 0.016127003}
-  m_LocalPosition: {x: 0.017578732, y: 0.10990174, z: 0.0031647533}
+  m_LocalRotation: {x: -0.119587176, y: 0.13071623, z: 0.9840489, w: 0.016127061}
+  m_LocalPosition: {x: 0.017578732, y: 0.109901726, z: 0.0031647517}
   m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12647,8 +12648,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749534472}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.068748996, y: -0.17384629, z: 0.016968345, w: 0.98222363}
-  m_LocalPosition: {x: -0.43620342, y: 0.00000046066094, z: 0.000000035989135}
+  m_LocalRotation: {x: 0.06874893, y: -0.17384467, z: 0.016968252, w: 0.98222387}
+  m_LocalPosition: {x: -0.4362034, y: 0.00000046066097, z: 0.000000021593483}
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16120,7 +16121,7 @@ Transform:
   m_GameObject: {fileID: 983465330}
   serializedVersion: 2
   m_LocalRotation: {x: 0.71245664, y: -0.0000031329675, z: -0.7017162, w: 0.0000041779113}
-  m_LocalPosition: {x: -0.106625855, y: -0.034980223, z: 0.11798751}
+  m_LocalPosition: {x: -0.10662586, y: -0.034980223, z: 0.117987506}
   m_LocalScale: {x: 0.9319945, y: 0.9319944, z: 0.9319945}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16304,7 +16305,7 @@ Transform:
   m_GameObject: {fileID: 986712352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000000875257, y: -0.000000050356054, z: 0.00000011670083}
+  m_LocalPosition: {x: 0.0000000875257, y: -0.00000005035605, z: 0.00000011670084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16489,7 +16490,7 @@ Transform:
   m_GameObject: {fileID: 1013261678}
   serializedVersion: 2
   m_LocalRotation: {x: -0.06516428, y: 0.099858984, z: -0.0074422555, w: 0.99283755}
-  m_LocalPosition: {x: -0.27796423, y: 0.0000002443081, z: 0.000000056954917}
+  m_LocalPosition: {x: -0.27796423, y: 0.00000024430807, z: 0.00000005695492}
   m_LocalScale: {x: 1.007843, y: 1.007843, z: 1.0078431}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16523,7 +16524,7 @@ Transform:
   m_GameObject: {fileID: 1016858418}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7881416, y: -0.008899444, z: -0.020339722, w: 0.6150935}
-  m_LocalPosition: {x: -0.28055266, y: -0.00000011651709, z: -0.00000005049349}
+  m_LocalPosition: {x: -0.28055263, y: -0.00000011651709, z: -0.000000050493487}
   m_LocalScale: {x: 0.8839231, y: 0.8839235, z: 0.88392353}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22714,7 +22715,7 @@ Transform:
   m_GameObject: {fileID: 1299085905}
   serializedVersion: 2
   m_LocalRotation: {x: -0.05436965, y: -0.23624621, z: 0.00082086027, w: 0.9701706}
-  m_LocalPosition: {x: -0.04465401, y: -0.000000006883233, z: -0.0000000864325}
+  m_LocalPosition: {x: -0.04465401, y: -0.000000006883232, z: -0.00000008643249}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22776,8 +22777,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303233996}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0034081761, y: 0.059762836, z: 0.006974129, w: 0.9981824}
-  m_LocalPosition: {x: -1.0437876, y: 0.0035637878, z: 0.013326614}
+  m_LocalRotation: {x: 0.0034081687, y: 0.059762836, z: 0.006974129, w: 0.9981824}
+  m_LocalPosition: {x: -1.0437875, y: 0.0035637876, z: 0.013326615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23362,7 +23363,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23386,7 +23386,7 @@ MonoBehaviour:
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23399,7 +23399,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23417,13 +23416,13 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 1
-      vertexOffset: 3126
+      vertexOffset: 12270
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23436,7 +23435,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23453,14 +23451,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 2
-      vertexOffset: 3896
+      submeshIndex: 1
+      vertexOffset: 13040
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23473,7 +23471,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23490,14 +23487,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 5310
+      submeshIndex: 0
+      vertexOffset: 3126
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23510,7 +23507,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23527,14 +23523,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 7100
+      submeshIndex: 0
+      vertexOffset: 4916
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23547,7 +23543,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23564,14 +23559,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 9730
+      submeshIndex: 0
+      vertexOffset: 7546
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23584,7 +23579,6 @@ MonoBehaviour:
       overlayScale: 1
       tags: []
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -23601,14 +23595,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 11633
+      submeshIndex: 0
+      vertexOffset: 9449
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -23635,42 +23629,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#FD151500;_SSSCol
             name: _SSSCol
             Value: {r: 0.99215686, g: 0.08235294, b: 0.08235294, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -23690,54 +23670,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.5000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 0.5
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -23757,14 +23720,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -23773,8 +23733,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Hair
       channelMask:
@@ -23793,8 +23751,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Eyes
       channelMask:
@@ -23813,8 +23769,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Undies
       channelMask:
@@ -23833,8 +23787,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
   animator: {fileID: 0}
   KeepAvatar: 0
@@ -23957,42 +23909,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#FD151500;_SSSCol
             name: _SSSCol
             Value: {r: 0.99215686, g: 0.08235294, b: 0.08235294, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24012,54 +23950,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.5000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 0.5
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -24079,14 +24000,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -24095,8 +24013,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24120,8 +24036,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24145,8 +24059,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24174,8 +24086,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24199,8 +24109,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24224,8 +24132,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24249,8 +24155,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24274,8 +24178,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24299,8 +24201,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24324,8 +24224,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24349,8 +24247,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -24381,7 +24277,6 @@ MonoBehaviour:
   customRotation: {x: 0, y: 0, z: 0}
   previewColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _buildCharacterEnabled: 1
-  nextBuildSlotsOnly: 0
   debugVertexes: 1
 --- !u!4 &1342538086
 Transform:
@@ -25183,8 +25078,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392466725}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.8214263, y: -0.033976264, z: -0.5620101, w: 0.09082536}
-  m_LocalPosition: {x: -0.5225012, y: 0.00000014625823, z: 0.000000023766946}
+  m_LocalRotation: {x: 0.8214262, y: -0.033976264, z: -0.56201005, w: 0.09082538}
+  m_LocalPosition: {x: -0.5225012, y: 0.00000014625822, z: 0.000000023766948}
   m_LocalScale: {x: 0.9236081, y: 0.9436862, z: 0.9436861}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26706,7 +26601,7 @@ Transform:
   m_GameObject: {fileID: 1457127412}
   serializedVersion: 2
   m_LocalRotation: {x: -0.002904962, y: -0.053684052, z: -0.0059444075, w: 0.99853605}
-  m_LocalPosition: {x: -0.17440292, y: 0.000000028904587, z: -0.000113477894}
+  m_LocalPosition: {x: -0.17440292, y: 0.000000028904589, z: -0.000113477894}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26738,8 +26633,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459548396}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1294218, y: 0.14601728, z: 0.98058265, w: 0.019664768}
-  m_LocalPosition: {x: 0.016968282, y: 0.11095249, z: 0.0019850044}
+  m_LocalRotation: {x: -0.12942201, y: 0.14601731, z: 0.98058254, w: 0.01966479}
+  m_LocalPosition: {x: 0.016968282, y: 0.11095249, z: 0.001985005}
   m_LocalScale: {x: 0.98299956, y: 0.9929998, z: 0.9930001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27384,7 +27279,7 @@ Transform:
   m_GameObject: {fileID: 1497995854}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000007450579, y: -0.07920218, z: 0.0000001370208, w: 0.99685854}
-  m_LocalPosition: {x: -0.05387845, y: 0.0000000035989132, z: 0.000000017544702}
+  m_LocalPosition: {x: -0.053878445, y: 0.000000003598913, z: 0.0000000175447}
   m_LocalScale: {x: 0.9726985, y: 0.97269875, z: 0.9726985}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28033,7 +27928,7 @@ Transform:
   m_GameObject: {fileID: 1533726899}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000014901161, y: -0.00000004214683, z: -5.684342e-14, w: 1}
-  m_LocalPosition: {x: 0.000000029175173, y: 0.0000000071935777, z: 0.00000011670092}
+  m_LocalPosition: {x: 0.000000029175174, y: 0.0000000071935773, z: 0.000000116700924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31008,7 +30903,7 @@ Transform:
   m_GameObject: {fileID: 1744216116}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0019804188, y: 0.09851392, z: -0.009376623, w: 0.99508953}
-  m_LocalPosition: {x: -0.1837557, y: 0.000000014799703, z: -0.000021267182}
+  m_LocalPosition: {x: -0.1837557, y: 0.000000014799702, z: -0.000021267182}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31045,7 +30940,7 @@ Transform:
   m_GameObject: {fileID: 1746000610}
   serializedVersion: 2
   m_LocalRotation: {x: -0.046800356, y: -0.066912614, z: -0.0037790686, w: 0.9966535}
-  m_LocalPosition: {x: -0.019071717, y: 0.0000000050300577, z: -0.00000027701367}
+  m_LocalPosition: {x: -0.019071717, y: 0.0000000050300577, z: -0.00000027701364}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31704,7 +31599,7 @@ Transform:
   m_GameObject: {fileID: 1791332728}
   serializedVersion: 2
   m_LocalRotation: {x: 0.051907882, y: 0.053370807, z: 0.8793826, w: -0.4702589}
-  m_LocalPosition: {x: -0.17375465, y: 0.07150723, z: 0.0032269896}
+  m_LocalPosition: {x: -0.17375465, y: 0.07150724, z: 0.0032269896}
   m_LocalScale: {x: 1.0100002, y: 1.0000002, z: 0.99999976}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31812,8 +31707,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814525773}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.033590727, y: -0.1894411, z: 0.021566674, w: 0.98108035}
-  m_LocalPosition: {x: -0.44515777, y: 0.00000020335892, z: 0.00000003631408}
+  m_LocalRotation: {x: 0.033590753, y: -0.1894415, z: 0.021566829, w: 0.9810803}
+  m_LocalPosition: {x: -0.44515783, y: 0.00000017430766, z: 0.000000043576897}
   m_LocalScale: {x: 0.9999999, y: 0.9999998, z: 0.99999964}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32174,13 +32069,12 @@ MonoBehaviour:
     dnaValues:
     - dnaTypeHash: 1932961400
     slotDataList:
-    - asset: {fileID: 11400000, guid: 0bfd4db5ca8f3f44e912a809539ed57c, type: 2}
+    - asset: {fileID: 11400000, guid: d7f8c8e371a310347b9e97420ed8def8, type: 2}
       overlayScale: 1
       tags:
       - Eyelash
       - Head
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32218,7 +32112,6 @@ MonoBehaviour:
       tags:
       - Eyes
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32242,7 +32135,7 @@ MonoBehaviour:
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32256,7 +32149,6 @@ MonoBehaviour:
       tags:
       - Feet
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32274,13 +32166,13 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 858
+      vertexOffset: 2272
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32294,7 +32186,6 @@ MonoBehaviour:
       tags:
       - Hands
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32312,13 +32203,13 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 2648
+      vertexOffset: 4062
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32334,7 +32225,6 @@ MonoBehaviour:
       - Head
       - Mouth
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32351,14 +32241,14 @@ MonoBehaviour:
       isSwapSlot: 0
       swapTag: 
       skinnedMeshRenderer: 0
-      submeshIndex: 3
-      vertexOffset: 10642
+      submeshIndex: 1
+      vertexOffset: 858
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32372,7 +32262,6 @@ MonoBehaviour:
       tags:
       - Legs
       Races: []
-      meshModifiers: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32390,13 +32279,13 @@ MonoBehaviour:
       swapTag: 
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 5278
+      vertexOffset: 6692
       UVArea:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32410,7 +32299,43 @@ MonoBehaviour:
       tags:
       - Torso
       Races: []
-      meshModifiers: []
+      blendShapeTargetSlot: 
+      BlendshapeFoldout: 0
+      ClipPlaneFoldout: 0
+      isDeleted: 0
+      expandAlongNormal: 0
+      overSmoosh: 0
+      smooshDistance: 0
+      smooshInvertX: 0
+      smooshInvertY: 0
+      smooshInvertZ: 0
+      smooshInvertDist: 0
+      smooshTargetTag: 
+      smooshableTag: 
+      isSwapSlot: 0
+      swapTag: 
+      skinnedMeshRenderer: 0
+      submeshIndex: 2
+      vertexOffset: 8595
+      UVArea:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 0.5
+      tempHidden: 0
+      isDisabled: 0
+      UVSet: 0
+      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
+      BlendshapeSlotNames: []
+      Suppressed: 0
+      dontSerialize: 0
+      rendererAsset: {fileID: 0}
+    - asset: {fileID: 11400000, guid: 1b412947a734f7347a7d7fb3bc3bd7f1, type: 2}
+      overlayScale: 1
+      tags:
+      - Head
+      Races: []
       blendShapeTargetSlot: 
       BlendshapeFoldout: 0
       ClipPlaneFoldout: 0
@@ -32428,51 +32353,13 @@ MonoBehaviour:
       swapTag: LongHair
       skinnedMeshRenderer: 0
       submeshIndex: 2
-      vertexOffset: 7181
-      UVArea:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1
-        height: 1
-      tempHidden: 0
-      isDisabled: 0
-      UVSet: 0
-      altMaterial: {fileID: 11400000, guid: 9baec5f7e5dc828408f9350562791968, type: 2}
-      BlendshapeSlotNames: []
-      Suppressed: 0
-      dontSerialize: 0
-      rendererAsset: {fileID: 0}
-    - asset: {fileID: 11400000, guid: b1de3fc0724e8044487be3bc40f8804a, type: 2}
-      overlayScale: 1
-      tags:
-      - Head
-      Races: []
-      meshModifiers: []
-      blendShapeTargetSlot: 
-      BlendshapeFoldout: 0
-      ClipPlaneFoldout: 0
-      isDeleted: 0
-      expandAlongNormal: 0
-      overSmoosh: 0.01
-      smooshDistance: 0.001
-      smooshInvertX: 0
-      smooshInvertY: 1
-      smooshInvertZ: 0
-      smooshInvertDist: 1
-      smooshTargetTag: 
-      smooshableTag: 
-      isSwapSlot: 0
-      swapTag: LongHair
-      skinnedMeshRenderer: 0
-      submeshIndex: 4
       vertexOffset: 12056
       UVArea:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 1
-        height: 1
+        height: 0.5
       tempHidden: 0
       isDisabled: 0
       UVSet: 0
@@ -32499,42 +32386,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;1.0000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 1
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32554,54 +32427,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAFloatProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#E0441B00;_SSSCol
             name: _SSSCol
             Value: {r: 0.8784314, g: 0.26666668, b: 0.105882354, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32621,54 +32477,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.4000;_GlossMapScale
+        - p11:
             name: _GlossMapScale
             Value: 0.4
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32688,14 +32527,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -32704,8 +32540,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Hair
       channelMask:
@@ -32724,8 +32558,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
     - name: Eyes
       channelMask:
@@ -32744,8 +32576,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
   animator: {fileID: 0}
   KeepAvatar: 0
@@ -32868,42 +32698,28 @@ MonoBehaviour:
         alwaysUpdate: 0
         alwaysUpdateParms: 1
         serializedProperties:
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;1.0000;_BumpScale
+        - p11:
             name: _BumpScale
             Value: 1
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32923,54 +32739,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAFloatProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: 
+        - p11:
             name: 
             Value: 0
           p10:
-            stringRepresentation: Color;#E0441B00;_SSSCol
             name: _SSSCol
             Value: {r: 0.8784314, g: 0.26666668, b: 0.105882354, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -32990,54 +32789,37 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
           propertType: UMAColorProperty
-        - p12:
-            stringRepresentation: 
-            name: 
-            Translate: {x: 0, y: 0}
-            Rotate: 0
-            Scale: {x: 1, y: 1}
-          p11:
-            stringRepresentation: Float;0.4000;_GlossMapScale
+        - p11:
             name: _GlossMapScale
             Value: 0.4
           p10:
-            stringRepresentation: 
             name: 
             Value: {r: 0, g: 0, b: 0, a: 0}
           p9:
-            stringRepresentation: 
             name: 
             Value: {x: 0, y: 0, z: 0, w: 0}
           p8:
-            stringRepresentation: 
             name: 
             Value: []
           p7:
-            stringRepresentation: 
             name: 
             Value: {fileID: 0}
           p6:
-            stringRepresentation: 
             name: 
             Value: []
           p5:
-            stringRepresentation: 
             name: 
             Value: 0
           p4:
-            stringRepresentation: 
             name: 
             Value:
               e00: 0
@@ -33057,14 +32839,11 @@ MonoBehaviour:
               e32: 0
               e33: 0
           p3:
-            stringRepresentation: 
             name: 
             Value: []
           p2:
-            stringRepresentation: 
             name: 
           p1:
-            stringRepresentation: 
             name: 
             offset: 0
             size: 0
@@ -33073,8 +32852,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33098,8 +32875,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33123,8 +32898,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 1
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33152,8 +32925,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.6156863, g: 0.039215688, b: 0.039215688, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33177,8 +32948,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33202,8 +32971,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33227,8 +32994,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33252,8 +33017,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33277,8 +33040,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33302,8 +33063,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33331,8 +33090,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33360,8 +33117,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33385,8 +33140,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33410,8 +33163,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.32941177, g: 0.32156864, b: 0.5058824, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33435,8 +33186,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33460,8 +33209,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33485,8 +33232,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0.64705884, g: 0.14509805, b: 0.9098039, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33510,8 +33255,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 1, g: 1, b: 1, a: 1}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33535,8 +33278,6 @@ MonoBehaviour:
       showAdvanced: 0
       isBaseColor: 0
       deleteThis: 0
-      colorsExpanded: 0
-      propertiesExpanded: 0
       displayColor: {r: 0, g: 0, b: 0, a: 0}
       _name: 
       _color: {r: 1, g: 1, b: 1, a: 1}
@@ -33567,7 +33308,6 @@ MonoBehaviour:
   customRotation: {x: 0, y: 0, z: 0}
   previewColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _buildCharacterEnabled: 1
-  nextBuildSlotsOnly: 0
   debugVertexes: 1
 --- !u!95 &1832691387
 Animator:
@@ -33936,7 +33676,7 @@ Transform:
   m_GameObject: {fileID: 1857218164}
   serializedVersion: 2
   m_LocalRotation: {x: -0.04717037, y: 0.07898587, z: -0.006693393, w: -0.9957366}
-  m_LocalPosition: {x: -0.01907168, y: -0.000000053477454, z: 0.00000009502213}
+  m_LocalPosition: {x: -0.01907168, y: -0.000000053477454, z: 0.000000095022116}
   m_LocalScale: {x: 0.9999998, y: 0.99999976, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34349,7 +34089,7 @@ Transform:
   m_GameObject: {fileID: 1867586239}
   serializedVersion: 2
   m_LocalRotation: {x: -0.067936584, y: 0.26838785, z: 0.06134159, w: -0.9589524}
-  m_LocalPosition: {x: -0.04944701, y: 0.00000012707514, z: -0.00000028184522}
+  m_LocalPosition: {x: -0.04944701, y: 0.00000012707514, z: -0.00000028184525}
   m_LocalScale: {x: 0.9999995, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34573,8 +34313,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878565191}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.78945947, y: 0.0770591, z: -0.60816056, w: -0.030926008}
-  m_LocalPosition: {x: -0.52294904, y: -0.00000005855336, z: 0.00000013357483}
+  m_LocalRotation: {x: 0.78945935, y: 0.07705899, z: -0.60816073, w: -0.03092595}
+  m_LocalPosition: {x: -0.5229491, y: -0.000000058553365, z: 0.00000013357483}
   m_LocalScale: {x: 0.9236079, y: 0.943686, z: 0.94368577}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36354,7 +36094,7 @@ Transform:
   m_GameObject: {fileID: 1981783876}
   serializedVersion: 2
   m_LocalRotation: {x: -0.8097095, y: 0.05499314, z: 0.011317706, w: 0.5841389}
-  m_LocalPosition: {x: -0.28055194, y: 0.00000033638926, z: -0.0000000070437207}
+  m_LocalPosition: {x: -0.28055194, y: 0.00000033638926, z: -0.000000007043721}
   m_LocalScale: {x: 0.88392353, y: 0.8839235, z: 0.88392353}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36983,8 +36723,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999432731}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0028792003, y: 0.05731737, z: 0.0075522354, w: 0.9983233}
-  m_LocalPosition: {x: -1.0892092, y: 0.0053711343, z: 0.0133314645}
+  m_LocalRotation: {x: 0.002879204, y: 0.05731737, z: 0.0075522354, w: 0.9983233}
+  m_LocalPosition: {x: -1.0892092, y: 0.0053711343, z: 0.013331464}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37972,7 +37712,7 @@ Transform:
   m_GameObject: {fileID: 2065760299}
   serializedVersion: 2
   m_LocalRotation: {x: -0.034522314, y: -0.09768647, z: -0.010566474, w: 0.9945622}
-  m_LocalPosition: {x: -0.031541515, y: 0.000000005559534, z: 0.000000082674596}
+  m_LocalPosition: {x: -0.031541515, y: 0.000000005559534, z: 0.0000000826746}
   m_LocalScale: {x: 0.9999997, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38003,7 +37743,7 @@ Transform:
   m_GameObject: {fileID: 2067393301}
   serializedVersion: 2
   m_LocalRotation: {x: -0.18800807, y: 0.0047516176, z: -0.39784145, w: 0.89797133}
-  m_LocalPosition: {x: -0.12266766, y: -0.00007854097, z: 0.00002695594}
+  m_LocalPosition: {x: -0.122667655, y: -0.00007854097, z: 0.00002695594}
   m_LocalScale: {x: 1.0236676, y: 1.0236675, z: 1.0236677}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38665,7 +38405,7 @@ Transform:
   m_GameObject: {fileID: 2100135954}
   serializedVersion: 2
   m_LocalRotation: {x: 0.050903365, y: -0.051809322, z: 0.8718062, w: 0.48443645}
-  m_LocalPosition: {x: -0.17375477, y: -0.07150719, z: 0.0032270493}
+  m_LocalPosition: {x: -0.17375477, y: -0.0715072, z: 0.0032270493}
   m_LocalScale: {x: 1.0099998, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39006,7 +38746,7 @@ Transform:
   m_GameObject: {fileID: 2128448901}
   serializedVersion: 2
   m_LocalRotation: {x: -0.032566365, y: 0.07715704, z: -0.038952004, w: -0.9957254}
-  m_LocalPosition: {x: -0.03169177, y: -0.00000012283935, z: -0.00000036022513}
+  m_LocalPosition: {x: -0.03169177, y: -0.00000012283935, z: -0.0000003602251}
   m_LocalScale: {x: 0.9999999, y: 0.99999964, z: 0.9999998}
   m_ConstrainProportionsScale: 0
   m_Children: []

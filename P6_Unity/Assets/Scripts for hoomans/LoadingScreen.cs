@@ -4,6 +4,8 @@ public class LoadingScreen : MonoBehaviour
 {
     public GameObject guy, gal, loadingScreen, imageTab, modelTab, peopleTab;
 
+    public GameObject childrenHolder;
+
     public bool hasFoundPeople = false;
     public bool hasLoaded = false;
     public bool guyIsActive;
@@ -67,5 +69,14 @@ public class LoadingScreen : MonoBehaviour
     {
         guyIsActive = false;
         Debug.Log("Changed to gal!");
+    }
+
+    public void DestroyChildren()
+    {
+        while(childrenHolder.transform.childCount > 0)
+        {
+            Destroy(childrenHolder.transform.GetChild(0));
+        }
+        Debug.Log("I destroyed all the children! :D");
     }
 }
