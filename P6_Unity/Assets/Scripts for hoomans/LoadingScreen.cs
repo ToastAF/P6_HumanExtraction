@@ -22,6 +22,7 @@ public class LoadingScreen : MonoBehaviour
         {
             imageTab.SetActive(false);
             peopleTab.SetActive(true);
+            loadingScreen.SetActive(false);
             hasFoundPeople = false;
         }
 
