@@ -8848,6 +8848,8 @@ MonoBehaviour:
   maleLowerClothesDropdownLabel: {fileID: 183990794}
   femaleUpperClothesDropdownLabel: {fileID: 546989090}
   femaleLowerClothesDropdownLabel: {fileID: 1111845920}
+  maleShoesDropdownLabel: {fileID: 0}
+  femaleShoesDropdownLabel: {fileID: 0}
 --- !u!114 &637631589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23214,8 +23216,8 @@ MonoBehaviour:
       m_Calls: []
   DelayUnload: 2
   BundleCheck: 1
-  KeepAnimatorController: 1
-  RecreateAnimatorOnRaceChange: 1
+  KeepAnimatorController: 0
+  RecreateAnimatorOnRaceChange: 0
   userInformation: 
   RecipeUpdated:
     m_PersistentCalls:

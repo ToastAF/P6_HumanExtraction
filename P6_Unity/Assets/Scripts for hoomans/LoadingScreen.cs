@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class LoadingScreen : MonoBehaviour
 {
-    public GameObject guy, gal, loadingScreen, modelTab, peopleTab;
+    public GameObject guy, gal, loadingScreen, imageTab, modelTab, peopleTab;
 
+    public bool hasFoundPeople = false;
     public bool hasLoaded = false;
     public bool guyIsActive;
     public bool loadedPage;
@@ -17,6 +18,13 @@ public class LoadingScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(hasFoundPeople == true)
+        {
+            imageTab.SetActive(false);
+            peopleTab.SetActive(true);
+            hasFoundPeople = false;
+        }
+
         if(hasLoaded == true)
         {
             if(guyIsActive == true)

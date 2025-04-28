@@ -268,6 +268,7 @@ public class Server : MonoBehaviour
                     CreateTextureFromBytes(imageData, i);
                     //Debug.Log("Do i go here???");
                 }
+                loadingScreen.hasFoundPeople = true;
             });
         }
 
