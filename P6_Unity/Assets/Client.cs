@@ -67,7 +67,7 @@ public static class JsonHelper
     }
 }
 
-public class Server : MonoBehaviour
+public class Client : MonoBehaviour
 {
         TcpClient client;
         NetworkStream stream;
