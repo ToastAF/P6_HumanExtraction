@@ -10,6 +10,7 @@ public class UI_ChangeClothes : MonoBehaviour
 
     public TMP_Text maleUpperClothesDropdownLabel, maleLowerClothesDropdownLabel, femaleUpperClothesDropdownLabel, femaleLowerClothesDropdownLabel;
     public TMP_Text maleShoesDropdownLabel, femaleShoesDropdownLabel;
+    public TMP_Text maleHairDropdownLabel, femaleHairDropdownLabel;
 
     string convertedString;
 
@@ -20,12 +21,34 @@ public class UI_ChangeClothes : MonoBehaviour
         dcaGal = otherScript.gal.GetComponent<DynamicCharacterAvatar>();
     }
 
+    public void ChangeMaleHair() 
+    {
+        ClearClothes("Hair");
+        
+
+        convertedString = maleHairDropdownLabel.text;
+        Debug.Log(convertedString);
+        
+        otherScript.ChangeGuyHair(convertedString);
+    }
+
+    public void ChangeFemaleHair()
+    {
+        ClearClothes("Hair");
+        
+
+        convertedString = femaleHairDropdownLabel.text;
+        Debug.Log(convertedString);
+
+        otherScript.ChangeGuyHair(convertedString);
+    }
     public void ChangeMaleUpperClothes() //                 -------------------------------- MALE --------------------------------
     {
         ClearClothes("Chest");
         ClearClothes("Shoulders");
 
         convertedString = ChooseClothes(maleUpperClothesDropdownLabel);
+        
 
         otherScript.ChangeClothing(convertedString);
     }

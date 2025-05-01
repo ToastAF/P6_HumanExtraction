@@ -55,6 +55,7 @@ public class ColorAndClothesChanger : MonoBehaviour
         else
         {
             guyScript.ClearSlot("Hair"); // Vi fjerner bare alt hår her
+            Debug.Log("clearing hair here! :D");
         }
         guyScript.BuildCharacter();
     }
@@ -231,7 +232,7 @@ public class ColorAndClothesChanger : MonoBehaviour
                 return "M_WorkPants_1";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "M_ShortsT2";
+                return "M_Shorts_2";
             case "skirt":
                 UMABodyPart = "Legs";
                 return "";
