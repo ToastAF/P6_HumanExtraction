@@ -232,7 +232,7 @@ public class ColorAndClothesChanger : MonoBehaviour
                 return "M_WorkPants_1";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "M_Shorts_2";
+                return "M_ShortsT2";
             case "skirt":
                 UMABodyPart = "Legs";
                 return "";

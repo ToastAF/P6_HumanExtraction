@@ -40,7 +40,7 @@ public class UI_ChangeClothes : MonoBehaviour
         convertedString = femaleHairDropdownLabel.text;
         Debug.Log(convertedString);
 
-        otherScript.ChangeGuyHair(convertedString);
+        otherScript.ChangeGalHair(convertedString);
     }
     public void ChangeMaleUpperClothes() //                 -------------------------------- MALE --------------------------------
     {
