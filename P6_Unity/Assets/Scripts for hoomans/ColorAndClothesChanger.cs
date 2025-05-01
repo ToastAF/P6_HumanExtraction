@@ -206,8 +206,10 @@ public class ColorAndClothesChanger : MonoBehaviour
     {
         switch (clothingType)
         {
+            // case "shirt, blouse":
             case "shirt, blouse":
                 UMABodyPart = "Chest"; //Hvor p� kroppen det skal sidde
+                Debug.Log("I print t-shirt");
                 return "M_T-Shirt"; //Navn p� UMA clothing recipe
             case "top, t-shirt, sweatshirt":
                 UMABodyPart = "Chest";
@@ -313,7 +315,7 @@ public class ColorAndClothesChanger : MonoBehaviour
                 return "F_Trousers";
             case "shorts":
                 UMABodyPart = "Legs";
-                return "M_ShortsT1";
+                return "M_ShortsT2";
             case "skirt":
                 UMABodyPart = "Legs";
                 return "F_Mini_Skirt_2";

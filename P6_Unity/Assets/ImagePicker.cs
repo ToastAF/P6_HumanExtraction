@@ -17,7 +17,7 @@ public class ImagePicker : MonoBehaviour
     {
         OpenFileDialog openFileDialog = new OpenFileDialog
         {
-            InitialDirectory = @"C:\", // Fixed escape character
+            InitialDirectory = @"C:\MyImages", // Fixed escape character
             Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif", // Fixed filter syntax
             Title = "Select an Image"
         };

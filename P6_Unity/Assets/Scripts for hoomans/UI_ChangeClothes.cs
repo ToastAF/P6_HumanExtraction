@@ -5,7 +5,7 @@ using UMA.CharacterSystem;
 
 public class UI_ChangeClothes : MonoBehaviour
 {
-    ColorAndClothesChanger otherScript; // ColorChangerPerhaps scriptet på samme objekt
+    ColorAndClothesChanger otherScript; // ColorChangerPerhaps scriptet pï¿½ samme objekt
     DynamicCharacterAvatar dcaGuy, dcaGal;
 
     public TMP_Text maleUpperClothesDropdownLabel, maleLowerClothesDropdownLabel, femaleUpperClothesDropdownLabel, femaleLowerClothesDropdownLabel;
@@ -100,6 +100,7 @@ public class UI_ChangeClothes : MonoBehaviour
         switch (dropdownText.text)
         {
             case "T-Shirt": // Upper body
+                Debug.Log("I worked halfways");
                 return "shirt, blouse";
             case "Shirt":
                 return "cardigan";

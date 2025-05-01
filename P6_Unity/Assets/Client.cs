@@ -84,6 +84,8 @@ public class Client : MonoBehaviour
         public LoadingScreen loadingScreen;
 
         private List<float> hsvHolder = new List<float>{0, 255, 255};
+        
+        private GameObject activeCheckmark = null;
 
         void Start()
         {
@@ -455,16 +457,26 @@ public class Client : MonoBehaviour
         }
     }
     
-    
+    public void removeToggle()
+    {
+        if (activeCheckmark != null)
+        {
+            activeCheckmark.SetActive(false);
+            activeCheckmark = null;
+        }
+        checkmarkCount = 0;
+    }
 
     void ToggleSelection(GameObject button, GameObject checkmark)
     {
-       if (!checkmark.activeSelf && checkmarkCount == 0)
+        if (!checkmark.activeSelf && checkmarkCount == 0)
         {
             checkmark.SetActive(true);
             checkmarkCount = 1;
+            activeCheckmark = checkmark; // Store reference to active checkmark
+
             rawPeopleToSend = button.GetComponentInChildren<RawImage>();
-            displayImage.texture = button.GetComponentInChildren<RawImage>().texture;
+            displayImage.texture = rawPeopleToSend.texture;
 
             displayImage.GetComponent<AspectRatioFitter>().aspectRatio =
                 button.GetComponentInChildren<AspectRatioFitter>().aspectRatio;
@@ -473,8 +485,8 @@ public class Client : MonoBehaviour
         {
             checkmark.SetActive(false);
             checkmarkCount = 0;
+            activeCheckmark = null;
         }
-
     }
 
         
