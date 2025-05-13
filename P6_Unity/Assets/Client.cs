@@ -541,6 +541,10 @@ public class Client : MonoBehaviour
             {
                 hoomanManager.GetComponent<ColorAndClothesChanger>().ChangeColor(Cloth.hex,Cloth.label);
                 Debug.Log($"I change color of {Cloth.label} to be {Cloth.hex}!");
+
+                //Dummy colors now :)
+                hoomanManager.GetComponent<DummySetColors>().DummyChangeColor(Cloth.hex, Cloth.label);
+            
             }
         }
         private void LogColorData()
