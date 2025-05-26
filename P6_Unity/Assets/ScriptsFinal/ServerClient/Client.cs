@@ -13,8 +13,7 @@ public class ClothingDetection
 {
     public string label;
     public float confidence;
-    public List<float> bbox; // [x_min, y_min, x_max, y_max]
-    // Remove hairType from here since it's now separate
+    public List<float> bbox;
 }
 
 [System.Serializable]
@@ -24,7 +23,6 @@ public class CombinedDetectionData
     public string hair;
 }
 
-// Modified ClothingDetectionData class
 public static class ClothingDetectionData
 {
     public static List<ClothingDetection> CurrentClothes = new List<ClothingDetection>();
@@ -36,17 +34,17 @@ public class ColorData
 {
     public string label;
     public string hex;
-    public float[] rgb; // [R, G, B] values 0-255
+    public float[] rgb;
 }
 
-// Container class for JSON parsing
+
 [System.Serializable]
 public class CombinedColorData
 {
-    public List<ColorData> items; // Matches Python's list structure
+    public List<ColorData> items;
 }
 
-// Static storage class
+
 public static class ClothingColorManager
 {
     public static List<ColorData> CurrentColors = new List<ColorData>();
@@ -60,7 +58,6 @@ public class ColorDataWrapper
 
 public static class JsonHelper
 {
-    // Add method for direct object deserialization
     public static T FromJson<T>(string json)
     {
         return JsonUtility.FromJson<T>(json);
@@ -74,18 +71,15 @@ public class Client : MonoBehaviour
         string host = "127.0.0.1";
         int port = 65432;
         public RawImage rawImageToSend;
-        public RawImage rawImageReceived; // Assign a UI RawImage to display received images
-        public Transform imageContainer;  // Parent transform for spawned images
-        private int checkmarkCount = 0;
+        public Transform imageContainer;
+        private int checkmarkCount;
         private RawImage rawPeopleToSend;
         public RawImage displayImage;
 
         public GameObject hoomanManager;
         public LoadingScreen loadingScreen;
 
-        private List<float> hsvHolder = new List<float>{0, 255, 255};
-        
-        private GameObject activeCheckmark = null;
+        private GameObject activeCheckmark;
 
         void Start()
         {
@@ -125,68 +119,42 @@ public class Client : MonoBehaviour
                 return;
             }
 
-            // 1. Check if the RawImage has a valid Texture
+            // check if the RawImage has a valid Texture
             if (rawPeopleToSend == null || rawPeopleToSend.texture == null)
             {
                 Debug.LogError("No RawImage or Texture found.");
                 return;
             }
 
-            // 2. Convert the RawImage’s texture to Texture2D
-            // RawImage.texture is a 'Texture', so we need to cast it if it's actually a Texture2D
+           
             Texture2D tex2D = rawPeopleToSend.texture as Texture2D;
-            if (tex2D == null)
-            {
-                Debug.LogError("The RawImage does not contain a Texture2D. " +
-                               "You may need to create a new Texture2D from a RenderTexture or other source.");
-                return;
-            }
             
-            // 2. Encode it to PNG (byte[])
+            
+            // encode it to PNG byte[]
             byte[] imageData = tex2D.EncodeToPNG();
+            
+            int length = imageData.Length;
+            byte[] lengthBytes = BitConverter.GetBytes(length);
+            stream.Write(lengthBytes, 0, lengthBytes.Length);
+            // Debug.Log($"[SendImage] Sending length={length} bytes for the image.");
+            // Debug.Log($"[SendImage] Sending length={lengthBytes} bytes for the image.");
+            
+            // here the image data is sent
+            stream.Write(imageData, 0, imageData.Length);
 
-            try
-            {
-                // 3. Send the length of the image data (so Python knows how many bytes to read)
-                // We'll send this length as a 4-byte integer
+            // Debug.Log("Image sent to Python.");
+           
+            ReceiveClothingData();
                 
-                int length = imageData.Length;
-                byte[] lengthBytes = BitConverter.GetBytes(length);
-                stream.Write(lengthBytes, 0, lengthBytes.Length);
-                Debug.Log($"[SendImage] Sending length={length} bytes for the image.");
-                Debug.Log($"[SendImage] Sending length={lengthBytes} bytes for the image.");
-
-                // 4. Send the actual image bytes
-                stream.Write(imageData, 0, imageData.Length);
-
-                Debug.Log("Image sent to Python.");
-                // Text file Receiver method here!!!!!!!
-                // ReceiveClothingDetections();
-                //Debug.Log("Donut");
-                //Debug.Log("Hopper jeg over?");
-                ReceiveClothingData();
-                //Debug.Log("Jeg er done nu");
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Error sending image: {e.Message}");
-            }
             
         }
 
         public void sendImageCommand()
         {
-            try
-            {
-                byte[] commandBytes = Encoding.UTF8.GetBytes("imagesend");
+            byte[] commandBytes = Encoding.UTF8.GetBytes("imagesend");
                 stream.Write(commandBytes, 0, commandBytes.Length);
                 Debug.Log("Image command sent");
                 SendImage();
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Command error: {e.Message}");
-            }
         }
         
         void SendImage()
@@ -197,49 +165,32 @@ public class Client : MonoBehaviour
                 return;
             }
 
-            // 1. Check if the RawImage has a valid Texture
+            // check if the RawImage has a valid Texture
             if (rawImageToSend == null || rawImageToSend.texture == null)
             {
                 Debug.LogError("No RawImage or Texture found.");
                 return;
             }
 
-            // 2. Convert the RawImage’s texture to Texture2D
-            // RawImage.texture is a 'Texture', so we need to cast it if it's actually a Texture2D
+            // convert the RawImage’s texture to Texture2D
             Texture2D tex2D = rawImageToSend.texture as Texture2D;
-            if (tex2D == null)
-            {
-                Debug.LogError("The RawImage does not contain a Texture2D. " +
-                               "You may need to create a new Texture2D from a RenderTexture or other source.");
-                return;
-            }
-
-            // 2. Encode it to PNG (byte[])
-            byte[] imageData = tex2D.EncodeToPNG();
-
-            try
-            {
-                // 3. Send the length of the image data (so Python knows how many bytes to read)
-                // We'll send this length as a 4-byte integer
-                
-                int length = imageData.Length;
-                byte[] lengthBytes = BitConverter.GetBytes(length);
-                stream.Write(lengthBytes, 0, lengthBytes.Length);
-                Debug.Log($"[SendImage] Sending length={length} bytes for the image.");
-                Debug.Log($"[SendImage] Sending length={lengthBytes} bytes for the image.");
-
-                // 4. Send the actual image bytes
-                stream.Write(imageData, 0, imageData.Length);
-
-                Debug.Log("Image sent to Python.");
-                ReceivePeopleData();
-                //Debug.Log("Do not go");
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Error sending image: {e.Message}");
-            }
             
+
+            // encode it to PNG (byte[])
+            byte[] imageData = tex2D.EncodeToPNG();
+            
+            int length = imageData.Length;
+            byte[] lengthBytes = BitConverter.GetBytes(length);
+            stream.Write(lengthBytes, 0, lengthBytes.Length);
+            // Debug.Log($"[SendImage] Sending length={length} bytes for the image.");
+            // Debug.Log($"[SendImage] Sending length={lengthBytes} bytes for the image.");
+
+            // here the image data is sent
+            stream.Write(imageData, 0, imageData.Length);
+
+            // Debug.Log("Image sent to Python.");
+            ReceivePeopleData();
+
         }
         
         async void ReceivePeopleData()
@@ -249,26 +200,18 @@ public class Client : MonoBehaviour
 
             await Task.Run(async () =>
             {
-                //Debug.Log("Do i go here???");
-                // Read person count (4 bytes big-endian)
                 byte[] countBytes = await ReadBytesAsync(4);
                 int personCount = BitConverter.ToInt32(ConvertEndian(countBytes), 0);
                 Debug.Log($"Received {personCount} people");
-
-                // Clear previous images
+                
                 for (int i = 0; i < personCount; i++)
                 {
-                    //Debug.Log("Do i go here???");
-                    // Read image size (4 bytes big-endian)
                     byte[] sizeBytes = await ReadBytesAsync(4);
                     int imageSize = BitConverter.ToInt32(ConvertEndian(sizeBytes), 0);
-                    //Debug.Log("Do i go here???");
-                    // Read image data
+                    
                     byte[] imageData = await ReadBytesAsync(imageSize);
-                    //Debug.Log("Do i go here???");
-                    // Create and display texture
+                    
                     CreateTextureFromBytes(imageData, i);
-                    //Debug.Log("Do i go here???");
                 }
                 loadingScreen.hasFoundPeople = true;
             });
@@ -308,40 +251,35 @@ public class Client : MonoBehaviour
     {
         try
         {
-            // Create texture from bytes
+            // texture from bytes
             Texture2D tex = new Texture2D(2, 2);
             tex.LoadImage(data);
-            
-            // Create button GameObject
+
             GameObject buttonObject = new GameObject($"PersonBtn_{index}");
             
-            // Add required components
             var button = buttonObject.AddComponent<Button>();
             var rectTransform = buttonObject.AddComponent<RectTransform>();
             var canvasRenderer = buttonObject.AddComponent<CanvasRenderer>();
             
-            // Create child RawImage for the button
             GameObject imageObject = new GameObject("Image");
             RawImage rawImage = imageObject.AddComponent<RawImage>();
             rawImage.texture = tex;
             
-            // Add Aspect Ratio Fitter to maintain proportions
+            
             AspectRatioFitter aspectFitter = imageObject.AddComponent<AspectRatioFitter>();
             aspectFitter.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
             aspectFitter.aspectRatio = (float)tex.width / tex.height;
             
-            // Create checkmark overlay
+            // this creates the checkmark overlay
             GameObject checkmarkObject = new GameObject("Checkmark");
             Image checkmarkImage = checkmarkObject.AddComponent<Image>();
             checkmarkImage.sprite = Resources.Load<Sprite>("CheckmarkSprite.png"); // Load your checkmark sprite
             checkmarkImage.color = Color.green;
             checkmarkObject.SetActive(false);
-
-            // Set hierarchy
+            
             imageObject.transform.SetParent(buttonObject.transform);
             checkmarkObject.transform.SetParent(buttonObject.transform);
             
-            // Set up button appearance
             var imageTransform = imageObject.GetComponent<RectTransform>();
             imageTransform.anchorMin = Vector2.zero;
             imageTransform.anchorMax = Vector2.one;
@@ -349,23 +287,20 @@ public class Client : MonoBehaviour
             imageTransform.offsetMin = Vector2.zero;
             imageTransform.offsetMax = Vector2.zero;
             
-            // Position checkmark in top-right corner
+            // positioning the checkmark
             var checkTransform = checkmarkObject.GetComponent<RectTransform>();
             checkTransform.anchorMin = new Vector2(1, 1);
             checkTransform.anchorMax = new Vector2(1, 1);
             checkTransform.pivot = new Vector2(1, 1);
             checkTransform.anchoredPosition = new Vector2(-10, -10);
             checkTransform.sizeDelta = new Vector2(20, 20);
-
-            // Set button click handler
+            
             button.onClick.AddListener(() => ToggleSelection(buttonObject, checkmarkObject));
             
-            // Set parent and scaling
             buttonObject.transform.SetParent(imageContainer);
             buttonObject.transform.localScale = Vector3.one;
             
-            // Set fixed size for button
-            rectTransform.sizeDelta = new Vector2(150, 150); // Uniform button size
+            rectTransform.sizeDelta = new Vector2(150, 150);
         }
         catch (Exception e)
         {
@@ -373,54 +308,20 @@ public class Client : MonoBehaviour
         }
     });
 }
-    
-    public async void ReceiveClothingDetections()
-    {
-        try
-        {
-            await Task.Run(async () =>
-            {
-                // Read header with data length
-                byte[] headerBytes = await ReadBytesAsync(10);
-                int dataLength = int.Parse(Encoding.UTF8.GetString(headerBytes).Trim());
 
-                // Read JSON data
-                byte[] jsonBytes = await ReadBytesAsync(dataLength);
-                string jsonData = Encoding.UTF8.GetString(jsonBytes);
-
-                // Deserialize on main thread
-                MainThreadDispatcher.ExecuteOnMainThread(() =>
-                {
-                    var combinedData = JsonHelper.FromJson<CombinedDetectionData>(jsonData);
-                
-                    ClothingDetectionData.CurrentClothes = combinedData.clothes ?? new List<ClothingDetection>();
-                    ClothingDetectionData.CurrentHairType = combinedData.hair ?? "";
-                
-                    Debug.Log($"Received {ClothingDetectionData.CurrentClothes.Count} clothing items " + 
-                              $"and hair type: {ClothingDetectionData.CurrentHairType}");
-                    DetectExample();
-                });
-            });
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"Detection receive error: {e.Message}");
-        }
-    }
-    
     public async void ReceiveClothingData()
     {
         try
         {
             await Task.Run(async () =>
             {
-                // First receive clothing + hair data
+                // receiving clothing + hair data
                 byte[] headerBytes = await ReadBytesAsync(10);
                 int dataLength = int.Parse(Encoding.UTF8.GetString(headerBytes).Trim());
                 byte[] jsonBytes = await ReadBytesAsync(dataLength);
                 string jsonData = Encoding.UTF8.GetString(jsonBytes);
 
-                // Then receive color data
+                // receiving color data
                 byte[] colorHeaderBytes = await ReadBytesAsync(10);
                 int colorDataLength = int.Parse(Encoding.UTF8.GetString(colorHeaderBytes).Trim());
                 byte[] colorJsonBytes = await ReadBytesAsync(colorDataLength);
@@ -428,19 +329,16 @@ public class Client : MonoBehaviour
 
                 MainThreadDispatcher.ExecuteOnMainThread(() =>
                 {
-                    // Process clothing data
                     var combinedData = JsonHelper.FromJson<CombinedDetectionData>(jsonData);
                     ClothingDetectionData.CurrentClothes = combinedData.clothes ?? new List<ClothingDetection>();
                     ClothingDetectionData.CurrentHairType = combinedData.hair ?? "";
                     
-                    // Process color data
                     var colorData = JsonHelper.FromJson<ColorDataWrapper>(colorJsonData);
                     ClothingColorManager.CurrentColors = colorData.colors ?? new List<ColorData>();
 
-                    Debug.Log($"Received {ClothingDetectionData.CurrentClothes.Count} clothing items " +
-                              $"and {ClothingColorManager.CurrentColors.Count} color entries");
-                    DetectExample();
-                    LogColorData();
+                    // Debug.Log($"Received {ClothingDetectionData.CurrentClothes.Count} clothing items " + $"and {ClothingColorManager.CurrentColors.Count} color entries");
+                    // DetectExample();
+                    // LogColorData();
                     
                     PutTheClothes();
                     hoomanManager.GetComponent<ColorAndClothesChanger>().ChangeHair(ClothingDetectionData.CurrentHairType);
@@ -473,7 +371,7 @@ public class Client : MonoBehaviour
         {
             checkmark.SetActive(true);
             checkmarkCount = 1;
-            activeCheckmark = checkmark; // Store reference to active checkmark
+            activeCheckmark = checkmark;
 
             rawPeopleToSend = button.GetComponentInChildren<RawImage>();
             displayImage.texture = rawPeopleToSend.texture;
@@ -494,21 +392,14 @@ public class Client : MonoBehaviour
         {
             if (client != null && stream != null)
             {
-                try
-                {
+                
                     byte[] shutdownMessage = Encoding.UTF8.GetBytes("shutdown");
                     stream.Write(shutdownMessage, 0, shutdownMessage.Length);
                     Debug.Log("Shutdown command sent to Python server.");
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError($"Error sending shutdown command: {e.Message}");
-                }
-                finally
-                {
+                    
                     stream.Close();
                     client.Close();
-                }
+                
             }
         }
 
